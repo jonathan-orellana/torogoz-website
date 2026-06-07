@@ -1,0 +1,74 @@
+/* ===== Chapter History — page-specific (loads AFTER home.css + history.css) ===== */
+
+/* ---------- Founding Brothers (full white, overlaps navy hero) ---------- */
+.chf{position:relative;z-index:2;background:#fff;color:var(--navytext);overflow:hidden;
+  padding:clamp(72px,8vw,112px) var(--pad) clamp(92px,10vw,140px);}
+.chf__watermark{position:absolute;right:-4%;top:48%;transform:translateY(-50%);font-family:var(--display);font-weight:700;
+  font-size:clamp(300px,46vw,720px);line-height:.64;color:rgba(104,169,220,.11);pointer-events:none;white-space:nowrap;z-index:0;}
+.chf__inner{position:relative;z-index:2;max-width:1080px;margin:0 auto;}
+.chf__head{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(28px,4vw,58px);align-items:end;margin-bottom:clamp(38px,5vw,58px);}
+.chf__kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sky-deep);}
+.chf__kicker::before{content:"";width:28px;height:2px;background:var(--sky);}
+.chf__title{font-family:var(--display);text-transform:uppercase;font-weight:700;font-size:clamp(36px,4.6vw,66px);line-height:1;color:var(--navytext);margin:14px 0 0;}
+.chf__title .accent{color:var(--sky-deep);}
+.chf__intro{font-size:clamp(15px,1.2vw,17px);color:var(--muted);line-height:1.75;margin:0;}
+.chf__grid{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,64px);}
+.chf__item{display:flex;align-items:baseline;gap:18px;padding:20px 2px;border-top:1px solid var(--line-ink);}
+.chf__no{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:var(--sky-deep);min-width:26px;}
+.chf__name{font-size:17.5px;font-weight:600;color:var(--navytext);}
+
+/* ---------- On Grounds — UVA feature band (navy + orange, split like home) ---------- */
+.chuva{position:relative;z-index:2;background:var(--navy-900);color:var(--ink);overflow:hidden;
+  padding:clamp(80px,10vw,128px) var(--pad);}
+.chuva__glyph{position:absolute;right:-5%;top:50%;transform:translateY(-50%);font-family:var(--display);font-weight:700;
+  font-size:clamp(280px,42vw,640px);line-height:.7;color:rgba(229,114,0,.06);pointer-events:none;white-space:nowrap;z-index:0;}
+.chuva__inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,5vw,72px);align-items:center;}
+.chuva__copy{min-width:0;}
+.chuva__kicker{display:inline-flex;align-items:center;gap:14px;font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#E57200;margin-bottom:22px;}
+.chuva__kicker::before{content:"";width:34px;height:2px;background:#E57200;}
+.chuva__title{font-family:var(--display);text-transform:uppercase;font-weight:700;font-size:clamp(38px,4.8vw,72px);line-height:1.0;color:#fff;margin:0;}
+.chuva__title .accent{color:#E57200;}
+.chuva__text{font-size:clamp(16px,1.3vw,18px);color:var(--ink-soft);line-height:1.75;margin:26px 0 0;max-width:34em;}
+.chuva__meta{display:flex;gap:36px;margin-top:34px;flex-wrap:wrap;}
+.chuva__stat{display:flex;flex-direction:column;}
+.chuva__stat b{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:40px;line-height:1;color:#E57200;}
+.chuva__stat span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;}
+.chuva__media{position:relative;}
+.chuva__media img{width:100%;height:clamp(320px,40vw,480px);object-fit:cover;object-position:center 30%;border-radius:12px;box-shadow:0 34px 80px rgba(0,0,0,.5);display:block;}
+.chuva__badge{position:absolute;left:-16px;bottom:-20px;display:flex;flex-direction:column;background:#E57200;color:#fff;padding:15px 22px;border-radius:14px;box-shadow:0 20px 38px rgba(0,0,0,.4);}
+.chuva__badge b{font-family:var(--display);font-weight:700;font-size:24px;line-height:.95;letter-spacing:.02em;}
+.chuva__badge span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;opacity:.95;}
+@media(max-width:860px){
+  .chuva__inner{grid-template-columns:1fr;gap:clamp(40px,8vw,52px);}
+  .chuva__media{order:-1;}
+  .chuva__media img{height:clamp(280px,56vw,400px);}
+}
+
+/* ---------- The Meaning of Torogoz (navy, overlaps white founders) ---------- */
+.chm{position:relative;z-index:3;background:var(--navy-900);color:var(--ink);overflow:hidden;
+  padding:clamp(84px,9vw,124px) var(--pad) clamp(84px,9vw,124px);}
+.chm__glyph{position:absolute;left:-6%;top:50%;transform:translateY(-50%);font-family:var(--display);font-weight:700;
+  font-size:clamp(300px,46vw,720px);line-height:.7;color:rgba(104,169,220,.06);pointer-events:none;white-space:nowrap;z-index:0;}
+.chm__grid{position:relative;z-index:2;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(34px,5vw,72px);align-items:center;}
+.chm__media{position:relative;}
+.chm__media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;box-shadow:0 34px 80px rgba(0,0,0,.5);display:block;}
+.chm__badge{position:absolute;right:-16px;bottom:-20px;display:flex;flex-direction:column;background:var(--sky);color:#fff;padding:15px 22px;border-radius:14px;box-shadow:0 20px 38px rgba(0,0,0,.4);}
+.chm__badge b{font-family:var(--display);font-weight:700;font-size:24px;line-height:.95;}
+.chm__badge span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;opacity:.92;}
+.chm__eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:13px;letter-spacing:.3em;font-weight:600;text-transform:uppercase;color:var(--sky);margin-bottom:22px;}
+.chm__eyebrow::before{content:"";width:34px;height:2px;background:var(--sky);}
+.chm__title{font-family:var(--display);text-transform:uppercase;font-weight:700;font-size:clamp(34px,4.4vw,62px);line-height:1;color:#fff;margin:0 0 28px;}
+.chm__title .accent{color:var(--sky);}
+.chm__quote{margin:0;}
+.chm__quote p{font-size:clamp(17px,1.5vw,21px);line-height:1.7;color:#fff;font-weight:400;margin:0;}
+.chm__quote p+p{margin-top:18px;color:var(--ink-soft);font-size:clamp(15px,1.25vw,17px);}
+.chm__rule{width:46px;height:2px;background:var(--sky);border:0;margin:30px 0 0;}
+
+@media(max-width:860px){
+  .chf__head{grid-template-columns:1fr;gap:20px;}
+  .chf__grid{grid-template-columns:1fr;}
+  .chm__grid{grid-template-columns:1fr;gap:clamp(40px,8vw,56px);}
+  .chm__media{order:-1;}
+  .chm__media img{aspect-ratio:16/11;}
+  .chm__media img[src*="torogoz-seal"]{aspect-ratio:1/1;max-width:230px;width:100%;margin:0 auto;display:block;}
+}
