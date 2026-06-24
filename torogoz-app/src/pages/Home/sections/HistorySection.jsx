@@ -41,7 +41,7 @@ export function HistorySection() {
 
         <figure className="history__media reveal" style={{ margin: 0 }}>
           <img
-            src="/assets/images/tl-2.jpg"
+            src="/assets/images/history-brothers.jpg"
             alt="The Torogoz Chapter together at the University of Virginia"
           />
         </figure>

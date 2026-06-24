@@ -22,7 +22,7 @@ export function OurHistory() {
         }
         subtitle="Since April 5, 1979, Lambda Sigma Upsilon has stood as a home for Latino voices in higher education — built on unity, shaped by sacrifice."
         stats={LSU_HERO_STATS}
-        imageSrc="/assets/images/founding.png"
+        imageSrc="/assets/images/lsu-founders.png"
         imageAlt="Brothers of Lambda Sigma Upsilon together at the founding"
       />
       <TimelineSection />
