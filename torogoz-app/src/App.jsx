@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-import { Header } from './components/Header/Header';
-import { Footer } from './components/Footer/Footer';
-import { Home } from './pages/Home/Home';
-import { OurHistory } from './pages/OurHistory/OurHistory';
-import { ChapterHistory } from './pages/ChapterHistory/ChapterHistory';
-import { Leadership } from './pages/Leadership/Leadership';
-import { Philanthropy } from './pages/Philanthropy/Philanthropy';
-import { Resources } from './pages/Resources/Resources';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import { Home } from "./pages/Home/Home";
+import { OurHistory } from "./pages/OurHistory/OurHistory";
+import { ChapterHistory } from "./pages/ChapterHistory/ChapterHistory";
+import { Leadership } from "./pages/Leadership/Leadership";
+import { Philanthropy } from "./pages/Philanthropy/Philanthropy";
+import { Resources } from "./pages/Resources/Resources";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

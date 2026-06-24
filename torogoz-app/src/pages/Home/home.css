@@ -237,67 +237,6 @@
   margin: 0;
 }
 
-/* ===== Chapter History (Stats) ===== */
-.history {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
-}
-
-.history__title {
-  font-size: clamp(42px, 5.2vw, 78px);
-  color: var(--navy-text);
-  margin: 0;
-}
-
-.history__title .accent {
-  color: var(--sky);
-}
-
-.history__text {
-  font-size: clamp(16px, 1.3vw, 18.5px);
-  color: var(--muted);
-  margin: 24px 0 0;
-  max-width: 32em;
-}
-
-.history__stats {
-  display: flex;
-  gap: 40px;
-  margin-top: 34px;
-  flex-wrap: wrap;
-}
-
-.history__stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.history__stat b {
-  font-family: Georgia, serif;
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 1;
-  color: var(--sky-deep);
-}
-
-.history__stat span {
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 8px;
-}
-
-.history__media img {
-  width: 100%;
-  height: clamp(320px, 42vw, 500px);
-  object-fit: cover;
-  object-position: center 30%;
-  border-radius: 12px;
-}
-
 /* ===== Namesake ===== */
 .namesake {
   display: grid;
@@ -636,17 +575,12 @@
 
 @media (max-width: 860px) {
   .purpose,
-  .namesake,
-  .history {
+  .namesake {
     grid-template-columns: 1fr;
   }
 
   .namesake__media {
     order: -1;
-  }
-
-  .history__media {
-    display: none;
   }
 
   .events__grid {
