@@ -1,0 +1,55 @@
+.compact-hero {
+  position: relative;
+  background: var(--navy-900);
+  color: var(--ink);
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(124px, 15vh, 168px) var(--page-padding) clamp(56px, 7vw, 84px);
+}
+
+.compact-hero__glyph {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(220px, 34vw, 460px);
+  line-height: 0.7;
+  color: rgba(104, 169, 220, 0.07);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.compact-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compact-hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(46px, 6.4vw, 92px);
+  line-height: 0.96;
+  color: #fff;
+  margin: 0;
+}
+
+.compact-hero__title .accent {
+  color: var(--sky);
+}
+
+.compact-hero__subtitle {
+  font-size: clamp(15px, 1.3vw, 18px);
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin: 20px 0 0;
+  max-width: 36em;
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS, CONTACT_FORM_URL } from '../../data/homeData';
 import './header.css';
 
@@ -10,13 +11,13 @@ function ChevronDownIcon() {
   );
 }
 
-function DropdownMenu({ items }) {
+function DropdownMenu({ items, onSelect }) {
   return (
     <div className="dropdown">
       {items.map((item) => (
-        <a key={item.href} href={item.href}>
+        <Link key={item.href} to={item.href} onClick={onSelect}>
           {item.label}
-        </a>
+        </Link>
       ))}
     </div>
   );
@@ -25,6 +26,11 @@ function DropdownMenu({ items }) {
 function NavItem({ link }) {
   const [isOpen, setIsOpen] = useState(false);
   const itemRef = useRef(null);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -40,7 +46,11 @@ function NavItem({ link }) {
   }, [isOpen]);
 
   if (!link.dropdown) {
-    return <a href={link.href}>{link.label}</a>;
+    return (
+      <Link to={link.href} aria-current={pathname === link.href ? 'page' : undefined}>
+        {link.label}
+      </Link>
+    );
   }
 
   function toggleDropdown(e) {
@@ -59,7 +69,7 @@ function NavItem({ link }) {
         {link.label}
         <ChevronDownIcon />
       </button>
-      <DropdownMenu items={link.dropdown} />
+      <DropdownMenu items={link.dropdown} onSelect={() => setIsOpen(false)} />
     </div>
   );
 }
@@ -67,6 +77,11 @@ function NavItem({ link }) {
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     function onScroll() {
@@ -85,23 +100,19 @@ export function Header() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  const headerClass = [
-    'header',
-    isScrolled && 'is-stuck',
-    isMobileMenuOpen && 'is-open',
-  ]
+  const headerClass = ['header', isScrolled && 'is-stuck', isMobileMenuOpen && 'is-open']
     .filter(Boolean)
     .join(' ');
 
   return (
     <header className={headerClass} id="header">
-      <a className="brand" href="/" aria-label="Torogoz Chapter home">
+      <Link className="brand" to="/" aria-label="Torogoz Chapter home">
         <img
           className="brand__crest"
           src="/assets/logos/image.png"
           alt="Lambda Sigma Upsilon crest"
         />
-      </a>
+      </Link>
 
       <nav className="nav" aria-label="Primary">
         {NAV_LINKS.map((link) => (
