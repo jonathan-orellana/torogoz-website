@@ -1,15 +1,6 @@
 import { UVA_STATS } from '../../../data/chapterHistoryData';
 import { StatCounter } from '../../../components/ui/StatCounter';
 
-function UvaStat({ stat }) {
-  return (
-    <div className="on-grounds__stat">
-      <StatCounter value={stat.value} />
-      <span>{stat.label}</span>
-    </div>
-  );
-}
-
 export function OnGroundsSection() {
   return (
     <section className="on-grounds" id="on-grounds">
@@ -27,7 +18,10 @@ export function OnGroundsSection() {
           </p>
           <div className="on-grounds__stats">
             {UVA_STATS.map((stat) => (
-              <UvaStat key={stat.label} stat={stat} />
+              <div key={stat.label} className="on-grounds__stat">
+                <StatCounter value={stat.value} />
+                <span>{stat.label}</span>
+              </div>
             ))}
           </div>
         </div>

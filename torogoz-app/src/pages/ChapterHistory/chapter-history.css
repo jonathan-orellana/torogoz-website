@@ -184,78 +184,6 @@
   display: block;
 }
 
-/* ===== Torogoz Meaning (navy) ===== */
-.torogoz-meaning {
-  position: relative;
-  z-index: 3;
-  background: var(--navy-900);
-  color: var(--ink);
-  overflow: hidden;
-  padding: clamp(84px, 9vw, 124px) var(--page-padding);
-  border-top: 1px solid var(--line);
-}
-
-.torogoz-meaning__grid {
-  position: relative;
-  z-index: 2;
-  max-width: 1120px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
-  gap: clamp(34px, 5vw, 72px);
-  align-items: center;
-}
-
-.torogoz-meaning__media img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border-radius: 0;
-  box-shadow: none;
-  background: var(--navy-900);
-  display: block;
-}
-
-.torogoz-meaning__title {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: clamp(34px, 4.4vw, 62px);
-  line-height: 1;
-  color: #fff;
-  margin: 0 0 28px;
-}
-
-.torogoz-meaning__title .accent {
-  color: var(--sky);
-}
-
-.torogoz-meaning__quote {
-  margin: 0;
-}
-
-.torogoz-meaning__quote p {
-  font-size: clamp(17px, 1.5vw, 21px);
-  line-height: 1.7;
-  color: #fff;
-  font-weight: 400;
-  margin: 0;
-}
-
-.torogoz-meaning__quote p + p {
-  margin-top: 18px;
-  color: var(--ink-soft);
-  font-size: clamp(15px, 1.25vw, 17px);
-}
-
-.torogoz-meaning__rule {
-  width: 46px;
-  height: 2px;
-  background: var(--sky);
-  border: 0;
-  margin: 30px 0 0;
-}
-
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
   .founding-brothers__head {
@@ -280,17 +208,4 @@
     height: clamp(280px, 56vw, 400px);
   }
 
-  .torogoz-meaning__grid {
-    grid-template-columns: 1fr;
-    gap: clamp(40px, 8vw, 56px);
-  }
-
-  .torogoz-meaning__media {
-    order: -1;
-  }
-
-  .torogoz-meaning__media img {
-    max-width: 230px;
-    margin: 0 auto;
-  }
 }

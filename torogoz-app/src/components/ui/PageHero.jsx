@@ -1,15 +1,6 @@
 import { StatCounter } from './StatCounter';
 import './page-hero.css';
 
-function HeroStat({ stat }) {
-  return (
-    <div className="page-hero__stat">
-      <StatCounter value={stat.value} />
-      <span>{stat.label}</span>
-    </div>
-  );
-}
-
 export function PageHero({ title, subtitle, stats, imageSrc, imageAlt, ctaLabel, ctaHref }) {
   return (
     <section className="page-hero">
@@ -21,7 +12,10 @@ export function PageHero({ title, subtitle, stats, imageSrc, imageAlt, ctaLabel,
           {stats && (
             <div className="page-hero__stats">
               {stats.map((stat) => (
-                <HeroStat key={stat.label} stat={stat} />
+                <div key={stat.label} className="page-hero__stat">
+                  <StatCounter value={stat.value} />
+                  <span>{stat.label}</span>
+                </div>
               ))}
             </div>
           )}

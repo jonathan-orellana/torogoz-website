@@ -2,16 +2,12 @@ import { Link } from 'react-router-dom';
 import { StatCounter } from '../ui/StatCounter';
 import './legacy-section.css';
 
-function StatItem({ stat }) {
-  return (
-    <div className="history__stat">
-      <StatCounter value={stat.value} />
-      <span>{stat.label}</span>
-    </div>
-  );
-}
+export function LegacySection({ title, text, stats, imageSrc, imageAlt, ctaLabel, ctaHref, isExternal }) {
+  const Cta = isExternal ? 'a' : Link;
+  const ctaLinkProps = isExternal
+    ? { href: ctaHref, target: '_blank', rel: 'noopener noreferrer' }
+    : { to: ctaHref };
 
-export function LegacySection({ title, text, stats, imageSrc, imageAlt, ctaLabel, ctaHref }) {
   return (
     <section className="section section--paper2" id="history">
       <div className="wrap history">
@@ -20,12 +16,15 @@ export function LegacySection({ title, text, stats, imageSrc, imageAlt, ctaLabel
           <p className="history__text">{text}</p>
           <div className="history__stats">
             {stats.map((stat) => (
-              <StatItem key={stat.label} stat={stat} />
+              <div key={stat.label} className="history__stat">
+                <StatCounter value={stat.value} />
+                <span>{stat.label}</span>
+              </div>
             ))}
           </div>
-          <Link className="btn btn--solid btn--condensed" to={ctaHref} style={{ marginTop: '30px' }}>
+          <Cta className="btn btn--solid btn--condensed" style={{ marginTop: '30px' }} {...ctaLinkProps}>
             {ctaLabel}
-          </Link>
+          </Cta>
         </div>
         <figure className="history__media reveal" style={{ margin: 0 }}>
           <img src={imageSrc} alt={imageAlt} />
