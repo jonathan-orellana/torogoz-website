@@ -1,0 +1,150 @@
+/* ===== Display Heading ===== */
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: 0.005em;
+}
+
+/* ===== Kicker Label ===== */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.kicker::before {
+  content: '';
+  width: 34px;
+  height: 2px;
+  background: var(--sky);
+}
+
+.kicker--ink {
+  color: var(--sky-deep);
+}
+
+.kicker--soft {
+  color: var(--ink-soft);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--solid {
+  background: var(--sky);
+  color: #fff;
+}
+
+.btn--solid:hover {
+  background: var(--sky-deep);
+}
+
+.btn--navy {
+  background: var(--navy-900);
+  color: #fff;
+}
+
+.btn--navy:hover {
+  background: var(--navy-800);
+}
+
+.btn--on-sky {
+  background: #fff;
+  color: var(--navy-900);
+}
+
+.btn--on-sky:hover {
+  background: #eaf2fa;
+}
+
+.btn--ghost-sky {
+  background: transparent;
+  color: #fff;
+  border: 1.6px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn--ghost-sky:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn--condensed {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== Layout ===== */
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: clamp(72px, 9vw, 128px) var(--page-padding);
+}
+
+.section--paper {
+  background: var(--paper);
+  color: var(--navy-text);
+}
+
+.section--paper2 {
+  background: var(--paper-2);
+  color: var(--navy-text);
+}
+
+.section--navy {
+  background: var(--navy-900);
+  color: var(--ink);
+}
+
+/* ===== Accent Color ===== */
+.accent {
+  color: var(--sky);
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

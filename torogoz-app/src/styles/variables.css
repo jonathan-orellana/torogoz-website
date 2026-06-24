@@ -1,0 +1,78 @@
+/* ===== Design Tokens ===== */
+:root {
+  /* Colors */
+  --sky: #68a9dc;
+  --sky-light: #8cc0e8;
+  --sky-deep: #4d92cd;
+  --navy-950: #06121f;
+  --navy-900: #0a1a2b;
+  --navy-850: #0c2138;
+  --navy-800: #0f2740;
+  --ink: #f4f7fa;
+  --ink-soft: #bdcedf;
+  --paper: #eef3f7;
+  --paper-2: #f7f9fc;
+  --line: rgba(255, 255, 255, 0.16);
+  --line-ink: rgba(10, 26, 43, 0.1);
+  --navy-text: #0a1a2b;
+  --muted: #55677d;
+
+  /* Typography */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
+
+  /* Spacing */
+  --page-padding: clamp(20px, 5vw, 72px);
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--navy-text);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
