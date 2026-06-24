@@ -179,7 +179,8 @@
   color: var(--sky);
 }
 
-.pillars__lede {
+.pillars__lede,
+.events__lede {
   font-size: clamp(16px, 1.3vw, 18px);
   color: var(--ink-soft);
   max-width: 24em;
