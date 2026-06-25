@@ -3,8 +3,8 @@ import {
   FOOTER_CONNECT_LINKS,
   INSTAGRAM_URL,
   EMAIL,
-} from '../../data/homeData';
-import './footer.css';
+} from "../../data/homeData";
+import "./footer.css";
 
 function InstagramIcon() {
   return (
@@ -37,8 +37,8 @@ export function Footer() {
             />
             <p className="footer__motto">Latinos Siempre Unidos</p>
             <p className="footer__desc">
-              The Torogoz Chapter of Lambda Sigma Upsilon Latino Fraternity, Inc. — University of
-              Virginia.
+              The Torogoz Chapter of Lambda Sigma Upsilon Latino Fraternity,
+              Inc. — University of Virginia.
             </p>
           </div>
 
@@ -57,7 +57,10 @@ export function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                {...(link.isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+                {...(link.isExternal && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
               >
                 {link.label}
               </a>
@@ -67,7 +70,8 @@ export function Footer() {
 
         <div className="footer__bottom">
           <span>
-            © {currentYear} Torogoz Chapter · Lambda Sigma Upsilon Latino Fraternity, Inc.
+            © {currentYear} Torogoz Chapter · Lambda Sigma Upsilon Latino
+            Fraternity, Inc.
           </span>
           <div className="footer__socials">
             <a

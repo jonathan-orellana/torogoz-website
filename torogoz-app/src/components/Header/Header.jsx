@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { NAV_LINKS, CONTACT_FORM_URL } from '../../data/homeData';
-import './header.css';
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { NAV_LINKS, CONTACT_FORM_URL } from "../../data/homeData";
+import "./header.css";
 
 function ChevronDownIcon() {
   return (
@@ -41,13 +41,16 @@ function NavItem({ link }) {
       }
     }
 
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, [isOpen]);
 
   if (!link.dropdown) {
     return (
-      <Link to={link.href} aria-current={pathname === link.href ? 'page' : undefined}>
+      <Link
+        to={link.href}
+        aria-current={pathname === link.href ? "page" : undefined}
+      >
         {link.label}
       </Link>
     );
@@ -59,7 +62,7 @@ function NavItem({ link }) {
   }
 
   return (
-    <div ref={itemRef} className={`nav__item${isOpen ? ' open' : ''}`}>
+    <div ref={itemRef} className={`nav__item${isOpen ? " open" : ""}`}>
       <button
         className="nav__toggle"
         type="button"
@@ -88,21 +91,25 @@ export function Header() {
       setIsScrolled(window.scrollY > 30);
     }
     onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
     function onResize() {
       if (window.innerWidth > 860) setIsMobileMenuOpen(false);
     }
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  const headerClass = ['header', isScrolled && 'is-stuck', isMobileMenuOpen && 'is-open']
+  const headerClass = [
+    "header",
+    isScrolled && "is-stuck",
+    isMobileMenuOpen && "is-open",
+  ]
     .filter(Boolean)
-    .join(' ');
+    .join(" ");
 
   return (
     <header className={headerClass} id="header">
