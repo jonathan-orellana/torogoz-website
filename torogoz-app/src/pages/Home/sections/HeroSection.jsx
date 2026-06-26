@@ -38,7 +38,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="hero__scroll">SCROLL</div>
     </section>
   );
 }

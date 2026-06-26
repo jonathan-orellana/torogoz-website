@@ -20,7 +20,10 @@ export function JoinSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Connect With Us →
+          Connect With Us
+          <svg viewBox="0 -960 960 960" aria-hidden="true" style={{ width: '18px', height: '18px', fill: 'currentColor', marginLeft: '2px' }}>
+            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+          </svg>
         </a>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { PILLARS } from '../../../data/homeData';
+import { PILLARS } from "../../../data/homeData";
 
 function PillarIcon({ viewBox, path }) {
   return (
@@ -27,12 +27,12 @@ export function PillarsSection() {
         <div className="pillars__head reveal">
           <div>
             <h2 className="h-display pillars__title">
-              Our four <span className="accent">pillars</span>
+              Our four <span className="accent">goals</span>
             </h2>
           </div>
           <p className="pillars__lede">
-            The values that shape every brother — in the classroom, on Grounds, and in the
-            community.
+            The values that shape every brother, in the classroom, on Grounds,
+            and in the community.
           </p>
         </div>
 

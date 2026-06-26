@@ -125,6 +125,14 @@ export function Header() {
         {NAV_LINKS.map((link) => (
           <NavItem key={link.label} link={link} />
         ))}
+        <a
+          className="nav__mobile-cta"
+          href={CONTACT_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact Us
+        </a>
       </nav>
 
       <a

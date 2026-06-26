@@ -116,22 +116,10 @@
   margin-top: 38px;
 }
 
-.hero__scroll {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 22px;
-  z-index: 2;
-  text-align: center;
-  font-size: 11px;
-  letter-spacing: 0.3em;
-  color: rgba(255, 255, 255, 0.85);
-}
-
 /* ===== Purpose ===== */
 .purpose {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: clamp(32px, 5vw, 72px);
   align-items: center;
 }
@@ -155,9 +143,9 @@
 
 .purpose__media img {
   width: 100%;
-  height: clamp(360px, 46vw, 560px);
+  height: clamp(300px, 38vw, 460px);
   object-fit: cover;
-  object-position: center 30%;
+  object-position: 30% 30%;
   border-radius: 12px;
 }
 
