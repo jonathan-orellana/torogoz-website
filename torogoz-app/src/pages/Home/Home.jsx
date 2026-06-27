@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { HeroSection } from './sections/HeroSection';
 import { PurposeSection } from './sections/PurposeSection';
@@ -10,6 +11,11 @@ import './home.css';
 
 export function Home() {
   useScrollReveal();
+
+  useEffect(() => {
+    document.body.classList.add('page--home');
+    return () => document.body.classList.remove('page--home');
+  }, []);
 
   return (
     <main>

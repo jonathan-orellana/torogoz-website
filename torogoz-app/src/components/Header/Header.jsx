@@ -3,10 +3,18 @@ import { Link, useLocation } from "react-router-dom";
 import { NAV_LINKS, CONTACT_FORM_URL } from "../../data/homeData";
 import "./header.css";
 
-function ChevronDownIcon() {
+function ChevronRightIcon() {
   return (
-    <svg viewBox="0 0 640 640" aria-hidden="true">
-      <path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z" />
+    <svg viewBox="0 -960 960 960" aria-hidden="true">
+      <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+    </svg>
+  );
+}
+
+function ArrowOutwardIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" aria-hidden="true" className="nav__outward">
+      <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T840-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
     </svg>
   );
 }
@@ -70,7 +78,7 @@ function NavItem({ link }) {
         onClick={toggleDropdown}
       >
         {link.label}
-        <ChevronDownIcon />
+        <ChevronRightIcon />
       </button>
       <DropdownMenu items={link.dropdown} onSelect={() => setIsOpen(false)} />
     </div>

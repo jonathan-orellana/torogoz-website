@@ -224,6 +224,17 @@
 }
 
 @media (max-width: 860px) {
+  .phil-intro,
+  .phil-feature,
+  .phil-cta {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+    position: relative;
+    z-index: 2;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .phil-intro__inner {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -231,7 +242,7 @@
 
   .phil-feature__inner {
     grid-template-columns: 1fr;
-    gap: clamp(40px, 8vw, 52px);
+    gap: 32px;
   }
 
   .phil-feature__media,

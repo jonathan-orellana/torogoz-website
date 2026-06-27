@@ -148,3 +148,12 @@
     transform: none;
   }
 }
+
+@media (max-width: 860px) {
+  .section {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+    position: relative;
+    z-index: 2;
+  }
+}

@@ -186,6 +186,24 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
+  .founding-brothers,
+  .on-grounds {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .founding-brothers {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .on-grounds {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .founding-brothers__head {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -197,7 +215,7 @@
 
   .on-grounds__inner {
     grid-template-columns: 1fr;
-    gap: clamp(40px, 8vw, 52px);
+    gap: 32px;
   }
 
   .on-grounds__media {

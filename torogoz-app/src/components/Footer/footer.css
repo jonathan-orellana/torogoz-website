@@ -3,7 +3,7 @@
   background: var(--sky);
   color: #fff;
   padding: clamp(56px, 7vw, 84px) var(--page-padding) 34px;
-  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-top: none;
 }
 
 .footer__top {
