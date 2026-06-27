@@ -22,14 +22,14 @@
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(34px, 5vw, 72px);
   align-items: center;
 }
 
 .meaning-section__media img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: clamp(300px, 36vw, 440px);
   object-fit: contain;
   border-radius: 0;
   box-shadow: none;
@@ -109,7 +109,7 @@
   }
 
   .meaning-section__media img {
-    max-width: 230px;
+    height: clamp(280px, 56vw, 400px);
     margin: 0 auto;
   }
 }

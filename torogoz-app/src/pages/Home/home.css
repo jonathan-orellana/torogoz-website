@@ -235,7 +235,7 @@
 
 .namesake__media img {
   width: 100%;
-  height: clamp(300px, 38vw, 440px);
+  height: clamp(300px, 36vw, 440px);
   object-fit: contain;
   border-radius: 0;
   box-shadow: none;

@@ -40,8 +40,12 @@ export function FeatureSection({ feature }) {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center' }}
             >
               {link.label}
+              <svg viewBox="0 -960 960 960" aria-hidden="true" style={{ width: '18px', height: '18px', fill: 'currentColor', marginLeft: '2px', verticalAlign: 'middle' }}>
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+              </svg>
             </a>
           )}
         </div>

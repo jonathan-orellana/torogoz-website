@@ -14,12 +14,17 @@
     0 2px 14px rgba(10, 26, 43, 0.1);
   transition:
     padding 0.25s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease,
+    transform 0.3s ease;
 }
 
 .header.is-stuck {
   padding: 15px var(--page-padding);
   box-shadow: 0 6px 22px rgba(10, 26, 43, 0.18);
+}
+
+.header.is-hidden {
+  transform: translateY(-100%);
 }
 
 .page--our-history .header {

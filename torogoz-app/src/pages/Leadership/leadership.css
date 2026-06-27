@@ -52,7 +52,7 @@
   letter-spacing: 0.02em;
   font-size: clamp(20px, 1.9vw, 25px);
   line-height: 1.05;
-  color: var(--sky-deep);
+  color: var(--sky);
   margin: 0 0 8px;
 }
 
@@ -75,7 +75,7 @@
   align-items: center;
   gap: 7px;
   font-size: 13.5px;
-  color: var(--sky-deep);
+  color: var(--sky);
   font-weight: 600;
   margin-top: 12px;
   transition: color 0.15s;

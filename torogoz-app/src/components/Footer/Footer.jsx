@@ -38,7 +38,7 @@ export function Footer() {
             <p className="footer__motto">Latinos Siempre Unidos</p>
             <p className="footer__desc">
               The Torogoz Chapter of Lambda Sigma Upsilon Latino Fraternity,
-              Inc. — University of Virginia.
+              Inc.
             </p>
           </div>
 

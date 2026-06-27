@@ -79,6 +79,7 @@ function NavItem({ link }) {
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { pathname } = useLocation();
 
@@ -87,9 +88,19 @@ export function Header() {
   }, [pathname]);
 
   useEffect(() => {
+    let lastY = window.scrollY;
+
     function onScroll() {
-      setIsScrolled(window.scrollY > 30);
+      const y = window.scrollY;
+      setIsScrolled(y > 30);
+      if (y > lastY && y > 80) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+      lastY = y;
     }
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -106,6 +117,7 @@ export function Header() {
   const headerClass = [
     "header",
     isScrolled && "is-stuck",
+    isHidden && !isMobileMenuOpen && "is-hidden",
     isMobileMenuOpen && "is-open",
   ]
     .filter(Boolean)

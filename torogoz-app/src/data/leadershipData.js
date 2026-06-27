@@ -44,4 +44,13 @@ export const BOARD_MEMBERS = [
     photoPosition: '50% 18%',
     email: 'gerardog.lsu26@gmail.com',
   },
+  {
+    name: 'Dillan Aguilar-Diaz',
+    role: 'Risk Management',
+    line: 'Spring 2026 Founding Line',
+    photo: '/assets/images/dillan.jpg',
+    photoAlt: 'Portrait of Dillan Aguilar-Diaz, Risk Management',
+    photoPosition: '50% 22%',
+    email: 'dillana.lsu26@gmail.com',
+  },
 ];
