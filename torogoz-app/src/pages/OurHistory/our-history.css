@@ -162,9 +162,7 @@
 .founding-fathers__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 0;
 }
 
 .founder-item {
