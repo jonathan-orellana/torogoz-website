@@ -29,7 +29,7 @@ export function OnGroundsSection() {
         </div>
         <figure className="on-grounds__media reveal" style={{ margin: 0 }}>
           <img
-            src={"/assets/images/brothers-grounds.jpg"}
+            src=""
             alt="The Torogoz Chapter on Grounds at the University of Virginia"
           />
         </figure>

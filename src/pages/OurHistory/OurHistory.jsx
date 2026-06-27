@@ -34,7 +34,7 @@ export function OurHistory() {
         }
         subtitle="Since April 5, 1979, Lambda Sigma Upsilon has stood as a home for Latino voices in higher education, built on unity, shaped by sacrifice."
         stats={LSU_HERO_STATS}
-        imageSrc={"/assets/images/liviston-college.png"}
+        imageSrc=""
         imageAlt="Brothers of Lambda Sigma Upsilon together at the founding"
         variant="navy"
         glyph="Î›Î£Î¥"
@@ -58,7 +58,7 @@ export function OurHistory() {
         }
         text="Founded in 1979 at Rutgers University by twenty men who believed Latino students deserved more, Lambda Sigma Upsilon has grown from a single chapter into a national brotherhood spanning nearly fifty universities, united by culture, driven by purpose."
         stats={LSU_LEGACY_STATS}
-        imageSrc={"/assets/images/brothers.png"}
+        imageSrc=""
         imageAlt="Founding brothers of Lambda Sigma Upsilon at Rutgers University"
         ctaLabel="Read the Full History"
         ctaHref="https://www.lsu79.org/history"
