@@ -32,7 +32,7 @@ export function Footer() {
           <div>
             <img
               className="footer__crest"
-              src={"/assets/logos/image.png"}
+              src={"/assets/logos/image.webp"}
               alt="Lambda Sigma Upsilon crest"
             />
             <p className="footer__motto">Latinos Siempre Unidos</p>

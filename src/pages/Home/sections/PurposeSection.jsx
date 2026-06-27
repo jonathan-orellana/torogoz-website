@@ -21,7 +21,7 @@ export function PurposeSection() {
         </div>
 
         <figure className="purpose__media reveal" style={{ margin: 0 }}>
-          <img src="" alt="Brothers of the Torogoz Chapter together" />
+          <img src="/assets/images/brothers-together.webp" alt="Brothers of the Torogoz Chapter together" />
         </figure>
       </div>
     </section>

@@ -11,7 +11,7 @@ export function HistorySection() {
       }
       text="What began as a vision grew into a brotherhood built on purpose, resilience, and unity, coming together to lay the foundation for a lasting legacy at the University of Virginia."
       stats={CHAPTER_STATS}
-      imageSrc=""
+      imageSrc="/assets/images/history-brothers.webp"
       imageAlt="The Torogoz Chapter together at the University of Virginia"
       ctaLabel="Explore Our Chapter History"
       ctaHref="/chapter-history"

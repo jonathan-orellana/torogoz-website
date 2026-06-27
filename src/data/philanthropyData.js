@@ -1,4 +1,4 @@
-export const PHIL_FEATURES = [
+﻿export const PHIL_FEATURES = [
   {
     id: "national",
     variant: "navy",
@@ -6,12 +6,12 @@ export const PHIL_FEATURES = [
     eyebrow: "National Philanthropy",
     title: "The fight against",
     titleAccent: "HIV / AIDS",
-    imageSrc: "/assets/logos/lsu-crest.png",
+    imageSrc: "/assets/logos/lsu-crest.webp",
     imageAlt: "Lambda Sigma Upsilon fraternity crest",
     isLogo: true,
     paragraphs: [
       "Lambda Sigma Upsilon's national philanthropy is the fight against HIV/AIDS, a cause that lives at the heart of our brotherhood. It honors founding father Alberto Rivera, who passed from AIDS-related complications in 1989.",
-      "Through education, awareness, and fundraising, our chapter works to break stigma, support those affected, and carry his memory forward — turning loss into a lasting commitment to our communities.",
+      "Through education, awareness, and fundraising, our chapter works to break stigma, support those affected, and carry his memory forward â€” turning loss into a lasting commitment to our communities.",
     ],
     link: {
       label: "Learn more about our national cause",
@@ -25,7 +25,7 @@ export const PHIL_FEATURES = [
     eyebrow: "Chapter Philanthropy",
     title: "Rooted in our",
     titleAccent: "local community",
-    imageSrc: "/assets/logos/torogoz-logo.png",
+    imageSrc: "/assets/logos/torogoz-logo.webp",
     imageAlt: "Torogoz Chapter seal",
     isLogo: true,
     paragraphs: [

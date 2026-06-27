@@ -136,7 +136,7 @@ export function Header() {
       <Link className="brand" to="/" aria-label="Torogoz Chapter home">
         <img
           className="brand__crest"
-          src={"/assets/logos/image.png"}
+          src={"/assets/logos/image.webp"}
           alt="Lambda Sigma Upsilon crest"
         />
       </Link>

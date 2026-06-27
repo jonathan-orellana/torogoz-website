@@ -1,18 +1,18 @@
-import { CONTACT_FORM_URL } from '../../../data/homeData';
+﻿import { CONTACT_FORM_URL } from '../../../data/homeData';
 
 export function HeroSection() {
   return (
     <section className="hero" id="top">
       <div className="hero__bg" aria-hidden="true" />
-      <span className="hero__watermark" aria-hidden="true">ΛΣΥ</span>
+      <span className="hero__watermark" aria-hidden="true">Î›Î£Î¥</span>
 
       <div className="hero__inner">
         <img
           className="hero__crest"
-          src="/assets/logos/lsu-logo.png"
+          src="/assets/logos/lsu-logo.webp"
           alt="Lambda Sigma Upsilon shield"
         />
-        <p className="hero__eyebrow">TOROGOZ CHAPTER · UNIVERSITY OF VIRGINIA</p>
+        <p className="hero__eyebrow">TOROGOZ CHAPTER Â· UNIVERSITY OF VIRGINIA</p>
         <h1 className="h-display hero__title">
           Lambda Sigma
           <br />
@@ -20,7 +20,7 @@ export function HeroSection() {
         </h1>
         <p className="hero__tag">Latino Fraternity, Inc.</p>
         <p className="hero__lede">
-          A brotherhood built on culture, scholarship, and service —{' '}
+          A brotherhood built on culture, scholarship, and service â€”{' '}
           <em>Latinos Siempre Unidos.</em>
         </p>
         <div className="hero__actions">
