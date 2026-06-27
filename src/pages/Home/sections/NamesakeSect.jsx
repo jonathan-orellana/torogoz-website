@@ -6,7 +6,7 @@ export function NamesakeSect() {
         <figure className="namesake__media reveal" style={{ margin: 0 }}>
           <img
             src={"/assets/logos/torogoz-logo.webp"}
-            alt="Torogoz Chapter seal â€” Lambda Sigma Upsilon Latino Fraternity, Inc., University of Virginia"
+            alt="Torogoz Chapter seal - Lambda Sigma Upsilon Latino Fraternity, Inc., University of Virginia"
           />
         </figure>
 

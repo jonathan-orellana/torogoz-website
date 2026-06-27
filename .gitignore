@@ -33,3 +33,11 @@ lerna-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+# Large raw video files — keep only compressed versions
+public/assets/videos/*.MOV
+public/assets/videos/*.mov
+public/assets/videos/*.webm
+
+# Original uncompressed images
+public/assets/images/150139.png

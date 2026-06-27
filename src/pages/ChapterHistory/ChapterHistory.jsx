@@ -3,6 +3,7 @@ import { PageHero } from "../../components/ui/PageHero";
 import { JoinSection } from "../../components/shared/JoinSection";
 import { FoundingBrothersSection } from "./sections/FoundingBrothersSection";
 import { OnGroundsSection } from "./sections/OnGroundsSection";
+import { CrossingSection } from "./sections/CrossingSection";
 import { TorogozMeaningSection } from "./sections/TorogozMeaningSection";
 import { CHAPTER_HERO_STATS } from "../../data/chapterHistoryData";
 import "./chapter-history.css";
@@ -29,6 +30,7 @@ export function ChapterHistory() {
       />
       <FoundingBrothersSection />
       <OnGroundsSection />
+      <CrossingSection />
       <TorogozMeaningSection />
       <JoinSection />
     </main>

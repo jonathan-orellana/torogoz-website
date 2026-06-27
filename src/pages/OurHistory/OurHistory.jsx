@@ -11,7 +11,7 @@ import "./our-history.css";
 
 const LSU_SPIRIT_PARAGRAPHS = [
   "Lambda Sigma Upsilon was founded on a simple but powerful conviction: that Latino students deserved a brotherhood that honored their culture, their struggles, and their identity.",
-  "The motto Latinos Siempre Unidos â€” Latinos Always United â€” was not just a phrase. It was a promise made by twenty men at Rutgers University who chose to stand together, and a commitment carried forward by every brother who has since worn the letters.",
+  "The motto Latinos Siempre Unidos — Latinos Always United — was not just a phrase. It was a promise made by twenty men at Rutgers University who chose to stand together, and a commitment carried forward by every brother who has since worn the letters.",
 ];
 
 export function OurHistory() {
@@ -37,7 +37,7 @@ export function OurHistory() {
         imageSrc="/assets/images/liviston-college.webp"
         imageAlt="Brothers of Lambda Sigma Upsilon together at the founding"
         variant="navy"
-        glyph="Î›Î£Î¥"
+        glyph="ΛΣΥ"
       />
       <MeaningSection
         title={
@@ -45,8 +45,8 @@ export function OurHistory() {
             The spirit of <span className="accent">Latinos Siempre Unidos</span>
           </>
         }
-        imageSrc={"/assets/logos/lsu-logo.webp"}
-        imageAlt="Lambda Sigma Upsilon fraternity logo"
+        videoSrc="https://www.youtube.com/embed/Kc4P_rNLkrk"
+        imageAlt="Lambda Sigma Upsilon — Latinos Siempre Unidos"
         paragraphs={LSU_SPIRIT_PARAGRAPHS}
         variant="paper"
       />
@@ -58,7 +58,7 @@ export function OurHistory() {
         }
         text="Founded in 1979 at Rutgers University by twenty men who believed Latino students deserved more, Lambda Sigma Upsilon has grown from a single chapter into a national brotherhood spanning nearly fifty universities, united by culture, driven by purpose."
         stats={LSU_LEGACY_STATS}
-        imageSrc="/assets/images/brothers.webp"
+        imageSrc="/assets/images/150139.webp"
         imageAlt="Founding brothers of Lambda Sigma Upsilon at Rutgers University"
         ctaLabel="Read the Full History"
         ctaHref="https://www.lsu79.org/history"

@@ -172,6 +172,7 @@
   background: var(--navy-900);
   padding: 18px 22px;
   transition: background 0.25s ease;
+  outline: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .founder-item:hover {
@@ -249,6 +250,14 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
+  .founder-item {
+    outline: none;
+  }
+
+  .founder-item:hover {
+    background: unset;
+  }
+
   .founding-fathers,
   .quick-facts {
     border-radius: 24px 24px 0 0;

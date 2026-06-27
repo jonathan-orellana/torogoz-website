@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="footer__bottom">
           <span>
-            Â© {currentYear} Torogoz Chapter Â· Lambda Sigma Upsilon Latino
+            © {currentYear} Torogoz Chapter · Lambda Sigma Upsilon Latino
             Fraternity, Inc.
           </span>
           <div className="footer__socials">
