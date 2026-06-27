@@ -4,7 +4,7 @@ import './page-hero.css';
 export function PageHero({ title, subtitle, stats, imageSrc, imageAlt, ctaLabel, ctaHref }) {
   return (
     <section className="page-hero">
-      <span className="page-hero__glyph" aria-hidden="true">ΛΣΥ</span>
+      <span className="page-hero__glyph" aria-hidden="true">UVA</span>
       <div className="page-hero__grid">
         <div className="page-hero__panel">
           <h1 className="h-display page-hero__title">{title}</h1>
@@ -20,8 +20,11 @@ export function PageHero({ title, subtitle, stats, imageSrc, imageAlt, ctaLabel,
             </div>
           )}
           {ctaLabel && ctaHref && (
-            <a className="btn btn--solid btn--condensed" href={ctaHref} style={{ marginTop: '34px' }}>
+            <a className="btn btn--solid btn--condensed" href={ctaHref} style={{ marginTop: '34px', display: 'inline-flex', alignItems: 'center' }}>
               {ctaLabel}
+              <svg viewBox="0 -960 960 960" aria-hidden="true" style={{ width: '18px', height: '18px', fill: 'currentColor', marginLeft: '2px', verticalAlign: 'middle' }}>
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+              </svg>
             </a>
           )}
         </div>

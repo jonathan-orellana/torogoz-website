@@ -1,20 +1,22 @@
-import { UVA_STATS } from '../../../data/chapterHistoryData';
-import { StatCounter } from '../../../components/ui/StatCounter';
+import { UVA_STATS } from "../../../data/chapterHistoryData";
+import { StatCounter } from "../../../components/ui/StatCounter";
 
 export function OnGroundsSection() {
   return (
     <section className="on-grounds" id="on-grounds">
-      <span className="on-grounds__glyph" aria-hidden="true">UVA</span>
+      <span className="on-grounds__glyph" aria-hidden="true">
+        UVA
+      </span>
       <div className="on-grounds__inner">
         <div className="on-grounds__copy reveal">
           <h2 className="on-grounds__title">
-            Built at the{' '}
-            <span className="accent">University of Virginia</span>
+            Built at the <span className="accent">University of Virginia</span>
           </h2>
           <p className="on-grounds__text">
-            From the first interest meetings to our chartering, the Torogoz Chapter was built by
-            Latino students determined to create a home for culture, brotherhood, and excellence on
-            Grounds — the first chapter of Lambda Sigma Upsilon at the University of Virginia.
+            From the first interest meetings to our chartering, the Torogoz
+            Chapter was built by Latino students determined to create a home for
+            culture, brotherhood, and excellence on Grounds, the first chapter
+            of Lambda Sigma Upsilon at the University of Virginia.
           </p>
           <div className="on-grounds__stats">
             {UVA_STATS.map((stat) => (

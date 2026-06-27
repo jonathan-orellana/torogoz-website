@@ -9,7 +9,7 @@ export function TorogozMeaningSection() {
   return (
     <MeaningSection
       title={<>The meaning of <span className="accent">Torogoz</span></>}
-      imageSrc="/assets/logos/torogoz-seal-blend.png"
+      imageSrc="/assets/logos/torogoz-logo.png"
       imageAlt="Torogoz Chapter seal — Lambda Sigma Upsilon, University of Virginia"
       paragraphs={PARAGRAPHS}
       variant="navy"

@@ -3,7 +3,7 @@
   z-index: 3;
   overflow: hidden;
   padding: clamp(84px, 9vw, 124px) var(--page-padding);
-  border-top: 1px solid var(--line);
+  border-top: none;
 }
 
 .meaning-section--navy {
