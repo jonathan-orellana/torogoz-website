@@ -1,3 +1,5 @@
+import { assetUrl } from '../../../utils/assetUrl';
+
 export function PurposeSection() {
   return (
     <section className="section section--paper" id="purpose">
@@ -20,7 +22,7 @@ export function PurposeSection() {
         </div>
 
         <figure className="purpose__media reveal" style={{ margin: 0 }}>
-          <img src="/assets/images/brothers-together.jpg" alt="Brothers of the Torogoz Chapter together" />
+          <img src={assetUrl("/assets/images/brothers-together.jpg")} alt="Brothers of the Torogoz Chapter together" />
         </figure>
       </div>
     </section>

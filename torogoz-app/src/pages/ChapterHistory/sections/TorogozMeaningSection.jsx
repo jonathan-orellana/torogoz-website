@@ -1,4 +1,5 @@
 import { MeaningSection } from '../../../components/shared/MeaningSection';
+import { assetUrl } from '../../../utils/assetUrl';
 
 const PARAGRAPHS = [
   'The torogoz symbolizes freedom, resilience, and cultural identity. Known for its inability to live in captivity, it represents the importance of living authentically and without limits.',
@@ -9,7 +10,7 @@ export function TorogozMeaningSection() {
   return (
     <MeaningSection
       title={<>The meaning of <span className="accent">Torogoz</span></>}
-      imageSrc="/assets/logos/torogoz-logo.png"
+      imageSrc={assetUrl("/assets/logos/torogoz-logo.png")}
       imageAlt="Torogoz Chapter seal — Lambda Sigma Upsilon, University of Virginia"
       paragraphs={PARAGRAPHS}
       variant="navy"

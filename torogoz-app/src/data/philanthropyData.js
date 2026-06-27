@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/assetUrl';
+
 export const PHIL_FEATURES = [
   {
     id: "national",
@@ -6,7 +8,7 @@ export const PHIL_FEATURES = [
     eyebrow: "National Philanthropy",
     title: "The fight against",
     titleAccent: "HIV / AIDS",
-    imageSrc: "/assets/logos/lsu-crest.png",
+    imageSrc: assetUrl("/assets/logos/lsu-crest.png"),
     imageAlt: "Lambda Sigma Upsilon fraternity crest",
     isLogo: true,
     paragraphs: [
@@ -25,7 +27,7 @@ export const PHIL_FEATURES = [
     eyebrow: "Chapter Philanthropy",
     title: "Rooted in our",
     titleAccent: "local community",
-    imageSrc: "/assets/logos/torogoz-logo.png",
+    imageSrc: assetUrl("/assets/logos/torogoz-logo.png"),
     imageAlt: "Torogoz Chapter seal",
     isLogo: true,
     paragraphs: [

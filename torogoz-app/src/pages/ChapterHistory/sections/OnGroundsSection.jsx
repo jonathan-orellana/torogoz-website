@@ -1,5 +1,6 @@
 import { UVA_STATS } from "../../../data/chapterHistoryData";
 import { StatCounter } from "../../../components/ui/StatCounter";
+import { assetUrl } from "../../../utils/assetUrl";
 
 export function OnGroundsSection() {
   return (
@@ -29,7 +30,7 @@ export function OnGroundsSection() {
         </div>
         <figure className="on-grounds__media reveal" style={{ margin: 0 }}>
           <img
-            src="/assets/images/brothers-grounds.jpg"
+            src={assetUrl("/assets/images/brothers-grounds.jpg")}
             alt="The Torogoz Chapter on Grounds at the University of Virginia"
           />
         </figure>

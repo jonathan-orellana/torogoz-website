@@ -4,6 +4,7 @@ import {
   INSTAGRAM_URL,
   EMAIL,
 } from "../../data/homeData";
+import { assetUrl } from "../../utils/assetUrl";
 import "./footer.css";
 
 function InstagramIcon() {
@@ -32,7 +33,7 @@ export function Footer() {
           <div>
             <img
               className="footer__crest"
-              src="/assets/logos/image.png"
+              src={assetUrl("/assets/logos/image.png")}
               alt="Lambda Sigma Upsilon crest"
             />
             <p className="footer__motto">Latinos Siempre Unidos</p>

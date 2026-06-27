@@ -1,10 +1,12 @@
+import { assetUrl } from '../../../utils/assetUrl';
+
 export function NamesakeSect() {
   return (
     <section className="section section--paper2">
       <div className="wrap namesake">
         <figure className="namesake__media reveal" style={{ margin: 0 }}>
           <img
-            src="/assets/logos/torogoz-logo.png"
+            src={assetUrl("/assets/logos/torogoz-logo.png")}
             alt="Torogoz Chapter seal — Lambda Sigma Upsilon Latino Fraternity, Inc., University of Virginia"
           />
         </figure>

@@ -1,15 +1,20 @@
+import { assetUrl } from '../../../utils/assetUrl';
 import { CONTACT_FORM_URL } from '../../../data/homeData';
 
 export function HeroSection() {
   return (
     <section className="hero" id="top">
-      <div className="hero__bg" aria-hidden="true" />
+      <div
+        className="hero__bg"
+        aria-hidden="true"
+        style={{ backgroundImage: `url("${assetUrl('/assets/images/university-of-virginia.jpg')}")` }}
+      />
       <span className="hero__watermark" aria-hidden="true">ΛΣΥ</span>
 
       <div className="hero__inner">
         <img
           className="hero__crest"
-          src="/assets/logos/lsu-logo.png"
+          src={assetUrl("/assets/logos/lsu-logo.png")}
           alt="Lambda Sigma Upsilon shield"
         />
         <p className="hero__eyebrow">TOROGOZ CHAPTER · UNIVERSITY OF VIRGINIA</p>

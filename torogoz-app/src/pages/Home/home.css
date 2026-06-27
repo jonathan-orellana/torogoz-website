@@ -29,8 +29,9 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("/assets/images/university-of-virginia.jpg") center 42% /
-    cover no-repeat;
+  background-position: center 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
   transform-origin: center 42%;
   will-change: transform;
   animation: heroKenBurns 26s ease-in-out infinite alternate;

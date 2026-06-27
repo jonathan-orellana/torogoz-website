@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NAV_LINKS, CONTACT_FORM_URL } from "../../data/homeData";
+import { assetUrl } from "../../utils/assetUrl";
 import "./header.css";
 
 function ChevronRightIcon() {
@@ -136,7 +137,7 @@ export function Header() {
       <Link className="brand" to="/" aria-label="Torogoz Chapter home">
         <img
           className="brand__crest"
-          src="/assets/logos/image.png"
+          src={assetUrl("/assets/logos/image.png")}
           alt="Lambda Sigma Upsilon crest"
         />
       </Link>
