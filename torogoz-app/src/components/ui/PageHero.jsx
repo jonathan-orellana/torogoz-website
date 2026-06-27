@@ -1,10 +1,10 @@
 import { StatCounter } from './StatCounter';
 import './page-hero.css';
 
-export function PageHero({ title, subtitle, stats, imageSrc, imageAlt, ctaLabel, ctaHref }) {
+export function PageHero({ title, subtitle, stats, imageSrc, imageAlt, ctaLabel, ctaHref, variant, glyph = 'UVA' }) {
   return (
-    <section className="page-hero">
-      <span className="page-hero__glyph" aria-hidden="true">UVA</span>
+    <section className={`page-hero${variant === 'navy' ? ' page-hero--navy' : ''}`}>
+      <span className="page-hero__glyph" aria-hidden="true">{glyph}</span>
       <div className="page-hero__grid">
         <div className="page-hero__panel">
           <h1 className="h-display page-hero__title">{title}</h1>

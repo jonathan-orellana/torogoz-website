@@ -22,6 +22,14 @@
   box-shadow: 0 6px 22px rgba(10, 26, 43, 0.18);
 }
 
+.page--our-history .header {
+  background: var(--navy-900);
+}
+
+.page--our-history .header.is-stuck {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+}
+
 /* ===== Brand ===== */
 .brand {
   display: flex;

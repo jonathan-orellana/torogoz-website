@@ -44,11 +44,6 @@
   display: block;
 }
 
-.member:hover .member__photo {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 56px rgba(10, 26, 43, 0.22);
-  outline-color: rgba(104, 169, 220, 0.55);
-}
 
 .member__role {
   font-family: var(--font-display);

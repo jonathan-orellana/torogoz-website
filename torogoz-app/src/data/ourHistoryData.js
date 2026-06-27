@@ -1,6 +1,7 @@
 export const LSU_HERO_STATS = [
   { value: '1979', label: 'Founded' },
   { value: '20', label: 'Founding Fathers' },
+  { value: 'Rutgers', label: 'Our Home' },
 ];
 
 export const LSU_LEGACY_STATS = [

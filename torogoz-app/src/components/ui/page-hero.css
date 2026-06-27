@@ -6,6 +6,30 @@
   padding: clamp(120px, 15vh, 168px) var(--page-padding) clamp(104px, 11vw, 150px);
 }
 
+.page-hero--navy {
+  background: var(--navy-900);
+}
+
+.page-hero--navy .page-hero__title {
+  color: #fff;
+}
+
+.page-hero--navy .page-hero__title .accent {
+  color: var(--sky);
+}
+
+.page-hero--navy .page-hero__subtitle {
+  color: var(--ink-soft);
+}
+
+.page-hero--navy .page-hero__stat b {
+  color: #fff;
+}
+
+.page-hero--navy .page-hero__stat span {
+  color: var(--sky);
+}
+
 .page-hero__glyph {
   position: absolute;
   left: -6%;
