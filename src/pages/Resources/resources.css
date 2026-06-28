@@ -117,9 +117,7 @@
   width: 15px;
   height: 15px;
   fill: currentColor;
-  transition: transform 0.25s ease;
 }
-
 
 /* ---------- Emergency band ---------- */
 .res-help {
