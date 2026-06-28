@@ -74,7 +74,7 @@ export const PILLARS = [
 ];
 
 export const CHAPTER_STATS = [
-  { value: "1979", label: "Founded" },
+  { value: "2026", label: "Founded" },
   { value: "85th", label: "National Chapter" },
   { value: "UVA", label: "Our Home" },
 ];

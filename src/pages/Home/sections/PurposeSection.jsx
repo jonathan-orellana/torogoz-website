@@ -1,5 +1,4 @@
-﻿
-export function PurposeSection() {
+﻿export function PurposeSection() {
   return (
     <section className="section section--paper" id="purpose">
       <div className="wrap purpose">
@@ -10,9 +9,10 @@ export function PurposeSection() {
             committed <span className="accent">brotherhood</span>
           </h2>
           <p className="purpose__text">
-            We, the brothers of Lambda Sigma Upsilon Latino Fraternity, Inc., believe that success
-            comes through a diverse and committed brotherhood grounded in honesty, respect, and
-            trust. Through this foundation, we promote brotherhood, personal growth, justice,
+            We, the brothers of Lambda Sigma Upsilon Latino Fraternity, Inc.
+            believe that success comes through a diverse and committed
+            brotherhood grounded in honesty, respect, and trust. Through this
+            foundation, we promote brotherhood, personal growth, justice,
             opportunity, and excellence in education.
           </p>
           <a className="btn btn--solid btn--condensed" href="/our-history">
@@ -21,7 +21,10 @@ export function PurposeSection() {
         </div>
 
         <figure className="purpose__media reveal" style={{ margin: 0 }}>
-          <img src="/assets/images/brothers-together.webp" alt="Brothers of the Torogoz Chapter together" />
+          <img
+            src="/assets/images/brothers-together.webp"
+            alt="Brothers of the Torogoz Chapter together"
+          />
         </figure>
       </div>
     </section>

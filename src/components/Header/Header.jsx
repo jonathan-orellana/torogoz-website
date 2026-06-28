@@ -100,8 +100,10 @@ export function Header() {
 
     function onScroll() {
       const y = window.scrollY;
+      const delta = y - lastY;
       setIsScrolled(y > 30);
-      if (y > lastY && y > 80) {
+      if (Math.abs(delta) < 6) return;
+      if (delta > 0 && y > 80) {
         setIsHidden(true);
       } else {
         setIsHidden(false);

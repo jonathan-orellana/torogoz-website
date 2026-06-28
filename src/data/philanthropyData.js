@@ -11,7 +11,7 @@
     isLogo: true,
     paragraphs: [
       "Lambda Sigma Upsilon's national philanthropy is the fight against HIV/AIDS, a cause that lives at the heart of our brotherhood. It honors founding father Alberto Rivera, who passed from AIDS-related complications in 1989.",
-      "Through education, awareness, and fundraising, our chapter works to break stigma, support those affected, and carry his memory forward â€” turning loss into a lasting commitment to our communities.",
+      "Through education, awareness, and fundraising, our chapter works to break stigma, support those affected, and carry his memory forward turning loss into a lasting commitment to our communities.",
     ],
     link: {
       label: "Learn more about our national cause",
