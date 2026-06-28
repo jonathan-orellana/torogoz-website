@@ -125,6 +125,10 @@
     padding-bottom: 48px;
   }
 
+  .meaning-section--navy {
+    background: var(--navy-950);
+  }
+
   .meaning-section__grid {
     grid-template-columns: 1fr;
     gap: clamp(40px, 8vw, 56px);

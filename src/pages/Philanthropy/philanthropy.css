@@ -235,6 +235,14 @@
     padding-bottom: 48px;
   }
 
+  .phil-cta {
+    border-radius: 24px 24px 24px 24px;
+  }
+
+  .phil-feature--navy {
+    background: var(--navy-950);
+  }
+
   .phil-intro__inner {
     grid-template-columns: 1fr;
     gap: 18px;

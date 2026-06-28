@@ -548,6 +548,43 @@
   white-space: nowrap;
 }
 
+/* ===== Laptop (MacBook) ===== */
+@media (max-width: 1440px) and (min-width: 861px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 72px;
+  }
+
+  .hero__title {
+    font-size: clamp(40px, 5vw, 72px);
+  }
+
+  .purpose__title {
+    font-size: clamp(40px, 4.2vw, 62px);
+  }
+
+  .pillars__title {
+    font-size: clamp(40px, 4.4vw, 64px);
+  }
+
+  .namesake__title {
+    font-size: clamp(36px, 3.6vw, 54px);
+  }
+
+  .events__title {
+    font-size: clamp(36px, 3.8vw, 58px);
+  }
+
+  .join__title {
+    font-size: clamp(44px, 5.6vw, 80px);
+  }
+
+  .join__inner {
+    padding-top: clamp(64px, 8vw, 96px);
+    padding-bottom: clamp(64px, 8vw, 96px);
+  }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
   .pillars__grid {
@@ -567,12 +604,16 @@
     padding-bottom: 64px;
   }
 
+  .hero__watermark {
+    color: rgba(255, 255, 255, 0.03);
+  }
+
   .pillar {
     outline: none;
   }
 
   .pillar:hover {
-    background: var(--navy-850);
+    background: var(--navy-900);
   }
 
   .pillars__head {
@@ -629,7 +670,7 @@
     outline: none;
     min-height: unset;
     padding: 28px 24px 32px;
-    background: var(--navy-850);
+    background: var(--navy-900);
   }
 
   .hero__actions {

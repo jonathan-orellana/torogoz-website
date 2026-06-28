@@ -257,20 +257,31 @@
 
   .founder-item {
     outline: none;
+    background: transparent;
   }
 
   .founder-item:hover {
-    background: unset;
+    background: transparent;
   }
 
-  .founding-fathers,
-  .quick-facts {
+  .founding-fathers {
     border-radius: 24px 24px 0 0;
     margin-top: -24px;
     position: relative;
     z-index: 2;
     padding-top: 48px;
     padding-bottom: 48px;
+    background: var(--navy-950);
+  }
+
+  .quick-facts {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+    position: relative;
+    z-index: 2;
+    padding-top: 48px;
+    padding-bottom: 72px;
+    background: var(--navy-950);
   }
 
   .founding-fathers__grid {
@@ -283,10 +294,7 @@
   .founder-item {
     justify-content: center;
     text-align: center;
-  }
-
-  .founder-item__dot {
-    display: none;
+    gap: 8px;
   }
 
   .quick-facts__grid {

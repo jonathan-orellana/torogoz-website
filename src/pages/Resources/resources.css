@@ -53,28 +53,11 @@
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.rcard::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 3px;
-  width: 0;
-  background: var(--sky);
-  transition: width 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 .rcard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 22px 48px rgba(10, 26, 43, 0.14);
-  border-color: transparent;
-}
-
-.rcard:hover::after {
-  width: 100%;
+  background: var(--paper);
 }
 
 .rcard__icon {
@@ -86,22 +69,12 @@
   border-radius: 14px;
   background: rgba(104, 169, 220, 0.14);
   margin-bottom: 22px;
-  transition: background 0.25s ease;
 }
 
 .rcard__icon svg {
   width: 30px;
   height: 30px;
   fill: var(--sky-deep);
-  transition: fill 0.25s ease;
-}
-
-.rcard:hover .rcard__icon {
-  background: var(--sky);
-}
-
-.rcard:hover .rcard__icon svg {
-  fill: #fff;
 }
 
 .rcard__cat {
@@ -147,9 +120,6 @@
   transition: transform 0.25s ease;
 }
 
-.rcard:hover .rcard__link svg {
-  transform: translateX(4px);
-}
 
 /* ---------- Emergency band ---------- */
 .res-help {
@@ -272,9 +242,11 @@
 
   .res-help__contacts {
     width: 100%;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .res-help__chip {
-    flex: 1;
+    width: 100%;
   }
 }

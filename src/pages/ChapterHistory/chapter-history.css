@@ -295,17 +295,21 @@
     margin-top: -24px;
     position: relative;
     z-index: 2;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
-  .founding-brothers,
+  .on-grounds,
   .crossing {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    background: var(--navy-950);
   }
 
-  .on-grounds {
-    padding-top: 48px;
-    padding-bottom: 48px;
+  .on-grounds__glyph {
+    color: rgba(229, 114, 0, 0.025);
+  }
+
+  .crossing__glyph {
+    color: rgba(104, 169, 220, 0.03);
   }
 
   .founding-brothers__head {

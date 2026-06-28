@@ -194,4 +194,8 @@
   .burger {
     display: flex;
   }
+
+  .page--our-history .header {
+    background: var(--navy-950);
+  }
 }

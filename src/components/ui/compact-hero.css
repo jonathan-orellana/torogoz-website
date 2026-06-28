@@ -53,3 +53,13 @@
   margin: 20px 0 0;
   max-width: 36em;
 }
+
+@media (max-width: 860px) {
+  .compact-hero {
+    background: var(--navy-950);
+  }
+
+  .compact-hero__glyph {
+    color: rgba(104, 169, 220, 0.03);
+  }
+}
