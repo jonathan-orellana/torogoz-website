@@ -561,16 +561,30 @@
 }
 
 @media (max-width: 860px) {
+  .hero {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 64px;
+  }
+
   .pillar {
     outline: none;
   }
 
   .pillar:hover {
-    background: unset;
+    background: var(--navy-850);
+  }
+
+  .pillars__head {
+    margin-bottom: 32px;
+  }
+
+  .pillars__lede {
+    display: none;
   }
 
   .join {
-    border-radius: 24px 24px 0 0;
+    border-radius: 24px;
     margin-top: -24px;
     position: relative;
     z-index: 2;
@@ -589,16 +603,33 @@
     grid-template-columns: 1fr;
   }
 
+  .events__bar {
+    margin-bottom: 24px;
+  }
+
   .social__grid {
     grid-template-columns: 1fr;
-    max-width: 420px;
-    margin: 0 auto;
+    gap: 16px;
+  }
+
+  .social__head {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 540px) {
   .pillars__grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pillar {
+    border-radius: 16px;
+    outline: none;
+    min-height: unset;
+    padding: 28px 24px 32px;
+    background: var(--navy-850);
   }
 
   .hero__actions {

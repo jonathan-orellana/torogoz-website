@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "./components/Header/Header";
+import { MobileMenu } from "./components/Header/MobileMenu";
 import { Footer } from "./components/Footer/Footer";
 import { Home } from "./pages/Home/Home";
 import { OurHistory } from "./pages/OurHistory/OurHistory";
@@ -20,10 +21,13 @@ function ScrollToTop() {
 }
 
 function Layout() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <ScrollToTop />
-      <Header />
+      <Header menuOpen={menuOpen} onToggle={() => setMenuOpen((p) => !p)} />
+      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-history" element={<OurHistory />} />

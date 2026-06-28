@@ -60,7 +60,7 @@
   position: relative;
 }
 
-.nav > a:not(.nav__mobile-cta),
+.nav > a,
 .nav__toggle {
   display: inline-flex;
   align-items: center;
@@ -164,180 +164,34 @@
 .burger {
   display: none;
   flex-direction: column;
-  gap: 5px;
-  background: none;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.16);
   border: none;
   cursor: pointer;
-  padding: 8px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .burger span {
-  width: 26px;
+  width: 18px;
   height: 2px;
   background: #fff;
+  border-radius: 2px;
   display: block;
-  transition: 0.25s;
-}
-
-.nav__mobile-cta {
-  display: none;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
-  .header__cta {
+  .header__cta,
+  .nav {
     display: none;
   }
 
   .burger {
     display: flex;
-  }
-
-  .header.is-open {
-    box-shadow: none;
-  }
-
-  .nav {
-    display: flex;
-    position: fixed;
-    inset: 96px 0 0 0;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 0;
-    background: var(--sky);
-    padding: 12px var(--page-padding) 120px;
-    border-radius: 0;
-    overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-16px);
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease,
-      visibility 0s linear 0.25s,
-      inset 0.25s ease;
-  }
-
-  .page--our-history .nav {
-    background: var(--navy-900);
-  }
-
-  .header.is-open .nav {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease,
-      visibility 0s linear 0s,
-      inset 0.25s ease;
-  }
-
-  .header.is-open.is-stuck .nav {
-    inset: 82px 0 0 0;
-  }
-
-  .header.is-open .nav__item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .nav__toggle svg {
-    transform: rotate(0deg);
-    width: 22px;
-    height: 22px;
-  }
-
-  .nav__item.open .nav__toggle svg {
-    transform: rotate(90deg);
-  }
-
-  .header.is-open .nav > a:not(.nav__mobile-cta),
-  .header.is-open .nav__toggle {
-    font-size: clamp(17px, 4.5vw, 20px);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    padding: 18px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-    width: 100%;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .header.is-open .nav > a:not(.nav__mobile-cta):last-of-type,
-  .header.is-open .nav__item:last-child .nav__toggle {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .header.is-open .dropdown {
-    position: static;
-    transform: none;
-    opacity: 0;
-    visibility: visible;
-    box-shadow: none;
-    background: transparent;
-    border-radius: 0;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    width: 100%;
-    transition:
-      max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 0.25s ease,
-      padding 0.35s ease;
-  }
-
-  .header.is-open .nav__item.open .dropdown {
-    max-height: 300px;
-    padding: 4px 0 8px;
-    opacity: 1;
-  }
-
-  .header.is-open .dropdown a {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 15px;
-    font-weight: 500;
-    padding: 11px 0 11px 16px;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .header.is-open .dropdown a:last-child {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .header.is-open .dropdown a:hover {
-    background: transparent;
-    color: #fff;
-  }
-
-  .header.is-open .dropdown a .nav__outward {
-    opacity: 0.5;
-    width: 15px;
-    height: 15px;
-  }
-
-  .nav__mobile-cta {
-    position: absolute;
-    bottom: 40px;
-    left: var(--page-padding);
-    right: var(--page-padding);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 52px;
-    background: #fff;
-    color: var(--navy-900);
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 999px;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
   }
 }

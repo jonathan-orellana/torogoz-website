@@ -250,6 +250,11 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
+  .timeline {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
   .founder-item {
     outline: none;
   }
@@ -264,6 +269,8 @@
     margin-top: -24px;
     position: relative;
     z-index: 2;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .founding-fathers__grid {

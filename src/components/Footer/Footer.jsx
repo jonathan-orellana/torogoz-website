@@ -69,10 +69,6 @@ export function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <span>
-            © {currentYear} Torogoz Chapter · Lambda Sigma Upsilon Latino
-            Fraternity, Inc.
-          </span>
           <div className="footer__socials">
             <a
               href={INSTAGRAM_URL}
@@ -86,6 +82,10 @@ export function Footer() {
               <EmailIcon />
             </a>
           </div>
+          <span className="footer__copy">
+            © {currentYear} Torogoz Chapter · Lambda Sigma Upsilon<br />
+            Latino Fraternity, Inc.
+          </span>
         </div>
       </div>
     </footer>

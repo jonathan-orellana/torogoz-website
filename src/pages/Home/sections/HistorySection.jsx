@@ -13,7 +13,7 @@ export function HistorySection() {
       stats={CHAPTER_STATS}
       imageSrc="/assets/images/history-brothers.webp"
       imageAlt="The Torogoz Chapter together at the University of Virginia"
-      ctaLabel="Explore Our Chapter History"
+      ctaLabel="Our Chapter History"
       ctaHref="/chapter-history"
     />
   );

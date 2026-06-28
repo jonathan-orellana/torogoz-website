@@ -22,7 +22,7 @@
   --font-body: 'Hanken Grotesk', sans-serif;
 
   /* Spacing */
-  --page-padding: clamp(20px, 5vw, 72px);
+  --page-padding: clamp(24px, 5vw, 72px);
 }
 
 /* ===== Reset ===== */
@@ -39,7 +39,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-body);
-  background: var(--paper);
+  background: var(--navy-950);
   color: var(--navy-text);
   font-size: 17px;
   line-height: 1.6;

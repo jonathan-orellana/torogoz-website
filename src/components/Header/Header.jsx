@@ -11,13 +11,6 @@ function ChevronRightIcon() {
   );
 }
 
-function ArrowOutwardIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" aria-hidden="true" className="nav__outward">
-      <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T840-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
-    </svg>
-  );
-}
 
 function DropdownMenu({ items, onSelect }) {
   return (
@@ -85,15 +78,9 @@ function NavItem({ link }) {
   );
 }
 
-export function Header() {
+export function Header({ menuOpen = false, onToggle }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -116,19 +103,10 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    function onResize() {
-      if (window.innerWidth > 860) setIsMobileMenuOpen(false);
-    }
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
-
   const headerClass = [
     "header",
     isScrolled && "is-stuck",
-    isHidden && !isMobileMenuOpen && "is-hidden",
-    isMobileMenuOpen && "is-open",
+    isHidden && !menuOpen && "is-hidden",
   ]
     .filter(Boolean)
     .join(" ");
@@ -147,14 +125,6 @@ export function Header() {
         {NAV_LINKS.map((link) => (
           <NavItem key={link.label} link={link} />
         ))}
-        <a
-          className="nav__mobile-cta"
-          href={CONTACT_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contact Us
-        </a>
       </nav>
 
       <a
@@ -169,9 +139,9 @@ export function Header() {
       <button
         className="burger"
         type="button"
-        aria-label="Toggle menu"
-        aria-expanded={isMobileMenuOpen}
-        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+        onClick={onToggle}
       >
         <span />
         <span />

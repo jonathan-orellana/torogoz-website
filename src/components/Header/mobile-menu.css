@@ -1,0 +1,245 @@
+/* ===== Mobile Menu Overlay ===== */
+.mm {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--navy-900);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: mm-enter 0.28s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes mm-enter {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Watermark ===== */
+.mm__mark {
+  position: absolute;
+  right: -30px;
+  bottom: 40px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(180px, 55vw, 280px);
+  line-height: 0.7;
+  color: rgba(104, 169, 220, 0.08);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* ===== Top row ===== */
+.mm__top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 18px 0;
+  flex-shrink: 0;
+}
+
+.mm__crest {
+  height: 36px;
+  width: auto;
+}
+
+.mm__close {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.18s ease;
+}
+
+.mm__close:active {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ===== Nav links ===== */
+.mm__nav {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 28px;
+}
+
+.mm__nav-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sky);
+  margin: 0 0 14px;
+}
+
+.mm__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 1;
+  color: #fff;
+}
+
+.mm__link--active {
+  color: var(--sky);
+}
+
+.mm__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sky);
+  flex-shrink: 0;
+}
+
+.mm__chev {
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid rgba(189, 206, 223, 0.6);
+  border-top: 2px solid rgba(189, 206, 223, 0.6);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.mm__chev--open {
+  transform: rotate(135deg);
+}
+
+/* ===== Dropdown group ===== */
+.mm__link--btn {
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-align: left;
+}
+
+.mm__sub {
+  padding-left: 16px;
+}
+
+.mm__link--sub {
+  border-top: none;
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mm__link--sub:last-child {
+  border-bottom: none;
+}
+
+.mm__link--sub.mm__link--active {
+  color: var(--sky);
+}
+
+.mm__group .mm__link--btn {
+  border-bottom: none;
+}
+
+.mm__group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Footer ===== */
+.mm__foot {
+  position: relative;
+  z-index: 2;
+  padding: 0 28px 30px;
+  flex-shrink: 0;
+}
+
+.mm__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: var(--sky);
+  color: #fff;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.18s ease;
+}
+
+.mm__cta:active {
+  background: var(--sky-deep);
+}
+
+.mm__footrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mm__motto {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.mm__socials {
+  display: flex;
+  gap: 10px;
+}
+
+.mm__socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.18s ease;
+}
+
+.mm__socials a:active {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.mm__socials svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
