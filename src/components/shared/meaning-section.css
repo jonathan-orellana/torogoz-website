@@ -129,6 +129,10 @@
     background: var(--navy-950);
   }
 
+  .meaning-section--navy .meaning-section__media img {
+    background: var(--navy-950);
+  }
+
   .meaning-section__grid {
     grid-template-columns: 1fr;
     gap: clamp(40px, 8vw, 56px);
