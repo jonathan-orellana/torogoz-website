@@ -27,7 +27,7 @@ function Layout() {
     <>
       <ScrollToTop />
       <Header menuOpen={menuOpen} onToggle={() => setMenuOpen((p) => !p)} />
-      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      {menuOpen && <MobileMenu onClose={() => setMenuOpen(false)} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-history" element={<OurHistory />} />

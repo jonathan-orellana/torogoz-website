@@ -30,10 +30,6 @@ export function PillarsSection() {
               Our four <span className="accent">goals</span>
             </h2>
           </div>
-          <p className="pillars__lede">
-            The values that shape every brother, in the classroom, on Grounds,
-            and in the community.
-          </p>
         </div>
 
         <div className="pillars__grid reveal">
@@ -47,6 +43,24 @@ export function PillarsSection() {
             alt="Five Torogoz Chapter brothers posing together with a Lambda Sigma Upsilon paddle"
             width={1536}
             height={2304}
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            className="pillars__photo-extra"
+            src="/assets/images/image-1789675633428.webp"
+            alt="Fraternity brothers greeting one another at an evening gathering"
+            width={2700}
+            height={1800}
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            className="pillars__photo-extra"
+            src="/assets/images/image-1789675651206.webp"
+            alt="A Torogoz brother embracing a supporter as friends celebrate"
+            width={2700}
+            height={1800}
             loading="lazy"
             decoding="async"
           />

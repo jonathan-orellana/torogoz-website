@@ -1,6 +1,6 @@
 ﻿export function NamesakeSect() {
   return (
-    <section className="section section--paper2">
+    <section className="section section--paper2 namesake-section">
       <div className="wrap namesake">
         <figure className="namesake__media reveal" style={{ margin: 0 }}>
           <img

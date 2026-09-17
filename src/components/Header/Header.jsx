@@ -140,6 +140,7 @@ export function Header({ menuOpen = false, onToggle }) {
         type="button"
         aria-label={menuOpen ? "Close menu" : "Open menu"}
         aria-expanded={menuOpen}
+        aria-controls="mobile-navigation"
         onClick={onToggle}
       >
         <span />

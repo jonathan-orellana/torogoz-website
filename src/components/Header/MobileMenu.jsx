@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NAV_LINKS, CONTACT_FORM_URL, INSTAGRAM_URL, EMAIL } from "../../data/homeData";
 import "./mobile-menu.css";
@@ -19,27 +19,34 @@ function EmailIcon() {
   );
 }
 
-export function MobileMenu({ open, onClose }) {
+export function MobileMenu({ onClose }) {
   const { pathname } = useLocation();
   const [expandedLabel, setExpandedLabel] = useState(null);
 
-  useEffect(() => {
-    onClose();
-  }, [pathname]);
+  const dialogRef = useRef(null);
+  const closeRef = useRef(onClose);
+  useEffect(() => { closeRef.current = onClose; }, [onClose]);
 
   useEffect(() => {
-    if (!open) setExpandedLabel(null);
-  }, [open]);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [open]);
-
-  if (!open) return null;
+    const dialog = dialogRef.current;
+    const previousFocus = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    dialog.showModal();
+    document.body.style.overflow = "hidden";
+    const desktop = window.matchMedia('(min-width: 861px)');
+    const closeOnDesktop = () => { if (desktop.matches) closeRef.current(); };
+    desktop.addEventListener('change', closeOnDesktop);
+    closeOnDesktop();
+    return () => {
+      desktop.removeEventListener('change', closeOnDesktop);
+      dialog.close();
+      document.body.style.overflow = previousOverflow;
+      previousFocus?.focus();
+    };
+  }, []);
 
   return (
-    <div className="mm" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <dialog ref={dialogRef} id="mobile-navigation" className="mm" aria-label="Navigation menu" onCancel={(event) => { event.preventDefault(); onClose(); }}>
       <div className="mm__top">
         <img className="mm__crest" src="/assets/logos/image.webp" alt="Lambda Sigma Upsilon crest" />
         <button className="mm__close" type="button" aria-label="Close menu" onClick={onClose}>
@@ -52,7 +59,7 @@ export function MobileMenu({ open, onClose }) {
       <nav className="mm__nav" aria-label="Mobile navigation">
         <p className="mm__nav-label">Menu</p>
 
-        {NAV_LINKS.map((link) => {
+        {NAV_LINKS.map((link, index) => {
           if (link.dropdown) {
             const isExpanded = expandedLabel === link.label;
             return (
@@ -60,19 +67,23 @@ export function MobileMenu({ open, onClose }) {
                 <button
                   className={`mm__link mm__link--btn${isExpanded ? " mm__link--expanded" : ""}`}
                   onClick={() => setExpandedLabel(isExpanded ? null : link.label)}
+                  type="button"
                   aria-expanded={isExpanded}
+                  aria-controls={`mobile-submenu-${index}`}
                 >
                   {link.label}
                   <span className={`mm__chev${isExpanded ? " mm__chev--open" : ""}`} aria-hidden="true" />
                 </button>
                 {isExpanded && (
-                  <div className="mm__sub">
+                  <div className="mm__sub" id={`mobile-submenu-${index}`}>
                     {link.dropdown.map((sub) => {
                       const isActive = pathname === sub.href;
                       return (
                         <Link
                           key={sub.href}
                           to={sub.href}
+                          onClick={onClose}
+                          aria-current={isActive ? "page" : undefined}
                           className={`mm__link mm__link--sub${isActive ? " mm__link--active" : ""}`}
                         >
                           {sub.label}
@@ -91,6 +102,8 @@ export function MobileMenu({ open, onClose }) {
             <Link
               key={link.href}
               to={link.href}
+                          onClick={onClose}
+                          aria-current={isActive ? "page" : undefined}
               className={`mm__link${isActive ? " mm__link--active" : ""}`}
             >
               {link.label}
@@ -121,6 +134,6 @@ export function MobileMenu({ open, onClose }) {
           </div>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }

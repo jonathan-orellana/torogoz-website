@@ -81,8 +81,8 @@ export const CHAPTER_STATS = [
 
 export const INSTAGRAM_POST_URLS = [
   "https://www.instagram.com/p/DZA0YYjkWkX/",
-  "https://www.instagram.com/p/DYAThc0kV5e/",
-  "https://www.instagram.com/p/DXqSgRcjCbm/",
+  "https://www.instagram.com/p/DdJ6Zn_kVbi/",
+  "https://www.instagram.com/p/DcjktRUBrnt/",
 ];
 
 // To show an event, fill in all fields.

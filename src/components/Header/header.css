@@ -215,3 +215,44 @@
     background: var(--navy-950);
   }
 }
+
+/* Compact desktop header for the home page. */
+@media (min-width: 861px) {
+  .page--home .header {
+    padding: 14px var(--page-padding);
+    gap: 16px;
+  }
+
+  .page--home .header.is-stuck {
+    padding: 10px var(--page-padding);
+  }
+
+  .page--home .brand__crest {
+    height: 52px;
+    width: auto;
+  }
+
+  .page--home .nav {
+    gap: clamp(16px, 2vw, 26px);
+  }
+
+  .page--home .nav > a,
+  .page--home .nav__toggle {
+    min-height: 44px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+
+  .page--home .header__cta {
+    height: 44px;
+    padding-inline: 18px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+
+  .page--home .dropdown a {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}

@@ -196,3 +196,63 @@
     font-size: 12px;
   }
 }
+
+/* Compact home footer on desktop. */
+@media (min-width: 861px) {
+  .page--home .footer {
+    padding: 48px var(--page-padding) 28px;
+  }
+
+  .page--home .footer > .wrap {
+    max-width: 1100px;
+  }
+
+  .page--home .footer__top {
+    gap: 32px;
+    padding-bottom: 28px;
+  }
+
+  .page--home .footer__crest {
+    height: 48px;
+    margin-bottom: 12px;
+  }
+
+  .page--home .footer__motto {
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    margin: 12px 0 0;
+  }
+
+  .page--home .footer__desc {
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  .page--home .footer__col h4 {
+    margin-bottom: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .page--home .footer__col a {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .page--home .footer__bottom {
+    padding-top: 20px;
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .page--home .footer__socials {
+    gap: 10px;
+  }
+
+  .page--home .footer__socials a {
+    width: 44px;
+    height: 44px;
+  }
+}
