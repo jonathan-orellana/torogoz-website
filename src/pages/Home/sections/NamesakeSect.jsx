@@ -1,11 +1,12 @@
-﻿
-export function NamesakeSect() {
+﻿export function NamesakeSect() {
   return (
     <section className="section section--paper2">
       <div className="wrap namesake">
         <figure className="namesake__media reveal" style={{ margin: 0 }}>
           <img
-            src={"/assets/logos/torogoz-logo.webp"}
+            src={
+              "/assets/logos/Trailblazing-Torogoz-Chapter-Logo-OFFICIAL.webp"
+            }
             alt="Torogoz Chapter seal - Lambda Sigma Upsilon Latino Fraternity, Inc., University of Virginia"
           />
         </figure>

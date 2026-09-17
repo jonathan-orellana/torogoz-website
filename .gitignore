@@ -41,3 +41,6 @@ public/assets/videos/*.webm
 
 # Original uncompressed images
 public/assets/images/150139.png
+
+# Vercel local/project metadata
+.vercel/

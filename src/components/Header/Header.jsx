@@ -11,7 +11,6 @@ function ChevronRightIcon() {
   );
 }
 
-
 function DropdownMenu({ items, onSelect }) {
   return (
     <div className="dropdown">

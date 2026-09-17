@@ -25,7 +25,7 @@
     eyebrow: "Chapter Philanthropy",
     title: "Rooted in our",
     titleAccent: "local community",
-    imageSrc: "/assets/logos/torogoz-logo.webp",
+    imageSrc: "/assets/logos/Trailblazing-Torogoz-Chapter-Logo-OFFICIAL.webp",
     imageAlt: "Torogoz Chapter seal",
     isLogo: true,
     paragraphs: [
