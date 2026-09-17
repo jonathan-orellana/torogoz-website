@@ -4,9 +4,7 @@
       <div className="wrap purpose">
         <div className="purpose__copy reveal">
           <h2 className="h-display purpose__title">
-            A diverse,
-            <br />
-            committed <span className="accent">brotherhood</span>
+            A diverse, committed <span className="accent">brotherhood</span>
           </h2>
           <p className="purpose__text">
             We, the brothers of Lambda Sigma Upsilon Latino Fraternity, Inc.

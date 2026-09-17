@@ -41,6 +41,16 @@ export function PillarsSection() {
             <PillarCard key={pillar.id} pillar={pillar} />
           ))}
         </div>
+        <figure className="pillars__photo reveal">
+          <img
+            src="/assets/images/IMG_7147.webp"
+            alt="Five Torogoz Chapter brothers posing together with a Lambda Sigma Upsilon paddle"
+            width={1536}
+            height={2304}
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
       </div>
     </section>
   );

@@ -180,3 +180,19 @@
     line-height: 1.6;
   }
 }
+
+/* Small sizing refinements for the home footer on phones. */
+@media (max-width: 540px) {
+  .page--home .footer__crest {
+    height: 44px;
+  }
+
+  .page--home .footer__socials a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .page--home .footer__copy {
+    font-size: 12px;
+  }
+}

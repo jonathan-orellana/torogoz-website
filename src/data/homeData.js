@@ -80,7 +80,7 @@ export const CHAPTER_STATS = [
 ];
 
 export const INSTAGRAM_POST_URLS = [
-  "https://www.instagram.com/p/DWb4qLKDdAU/",
+  "https://www.instagram.com/p/DZA0YYjkWkX/",
   "https://www.instagram.com/p/DYAThc0kV5e/",
   "https://www.instagram.com/p/DXqSgRcjCbm/",
 ];
@@ -89,7 +89,11 @@ export const INSTAGRAM_POST_URLS = [
 // Leave title empty ("") for a "Coming Soon" placeholder.
 // date: "YYYY-MM-DD"  |  startTime / endTime: "HH:MM" (24-hour)
 export const EVENTS = [
-  { title: "", date: "", startTime: "", endTime: "", location: "" },
-  { title: "", date: "", startTime: "", endTime: "", location: "" },
-  { title: "", date: "", startTime: "", endTime: "", location: "" },
+  {
+    title: "First Informational of the Semester",
+    date: "2026-09-16",
+    startTime: "19:30",
+    endTime: "",
+    location: "RSVP for location",
+  },
 ];

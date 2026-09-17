@@ -1,12 +1,9 @@
-import { useState } from 'react';
 import {
   formatDisplayDay,
   formatDisplayMonth,
   formatTimeRange,
   buildGoogleCalendarUrl,
-  buildIcsBlob,
-  downloadIcsFile,
-} from '../../utils/calendarUtils';
+} from "../../utils/calendarUtils";
 
 function CalendarIcon() {
   return (
@@ -34,36 +31,26 @@ function PlaceholderCard() {
 }
 
 export function EventCard({ event }) {
-  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
-
   const { title, date, startTime, endTime, location } = event;
   const hasEvent = Boolean(title && date);
 
   if (!hasEvent) return <PlaceholderCard />;
 
   const description = `${title} — Torogoz Chapter of Lambda Sigma Upsilon.`;
-  const calendarData = { title, date, startTime, endTime, location, description };
+  const calendarData = {
+    title,
+    date,
+    startTime,
+    endTime,
+    location,
+    description,
+  };
   const timeRange = formatTimeRange(startTime, endTime);
   const googleCalendarUrl = buildGoogleCalendarUrl(calendarData);
   const hasCalendarButton = Boolean(startTime);
 
-  function openCalendar(e) {
-    e.stopPropagation();
-    setIsCalendarOpen((prev) => !prev);
-  }
-
-  function downloadIcs(e) {
-    e.preventDefault();
-    downloadIcsFile(buildIcsBlob(calendarData), title);
-    setIsCalendarOpen(false);
-  }
-
-  function closeCalendar() {
-    setIsCalendarOpen(false);
-  }
-
   return (
-    <article className={`event-card${isCalendarOpen ? ' cal-open' : ''}`}>
+    <article className="event-card">
       <div className="event-card__date">
         <span className="event-card__day">{formatDisplayDay(date)}</span>
         <span className="event-card__month">{formatDisplayMonth(date)}</span>
@@ -75,38 +62,15 @@ export function EventCard({ event }) {
           {location && <p className="event-card__loc">{location}</p>}
         </div>
         {hasCalendarButton && (
-          <>
-            <button
-              className="cal-btn"
-              type="button"
-              aria-haspopup="true"
-              aria-expanded={isCalendarOpen}
-              onClick={openCalendar}
-            >
-              <CalendarIcon />
-              Add to Calendar
-            </button>
-            <div className="cal-pop" role="menu">
-              <a
-                className="cal-pop__item"
-                href={googleCalendarUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                role="menuitem"
-                onClick={closeCalendar}
-              >
-                Google Calendar
-              </a>
-              <a
-                className="cal-pop__item"
-                href="#"
-                role="menuitem"
-                onClick={downloadIcs}
-              >
-                Apple / Outlook (.ics)
-              </a>
-            </div>
-          </>
+          <a
+            className="cal-btn"
+            href={googleCalendarUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CalendarIcon />
+            Add to Google Calendar
+          </a>
         )}
       </div>
     </article>

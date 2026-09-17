@@ -186,6 +186,22 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
+  .page--home .header,
+  .page--home .header.is-stuck {
+    padding: 10px 20px;
+  }
+
+  .page--home .brand__crest {
+    height: 44px;
+    width: auto;
+  }
+
+  .page--home .burger {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
   .header__cta,
   .nav {
     display: none;

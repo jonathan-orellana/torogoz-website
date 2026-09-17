@@ -24,7 +24,7 @@ export function HeroSection() {
         </h1>
         <p className="hero__tag">Latino Fraternity, Inc.</p>
         <p className="hero__lede">
-          A brotherhood built on culture, scholarship, and service —{" "}
+          A brotherhood built on culture, scholarship, and service.{" "}
           <em>Latinos Siempre Unidos.</em>
         </p>
         <div className="hero__actions">

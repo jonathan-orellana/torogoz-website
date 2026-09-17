@@ -602,9 +602,64 @@
 
 @media (max-width: 860px) {
   .hero {
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 64px;
+    min-height: auto;
+    padding: 88px 24px 60px;
+  }
+
+  .hero__inner {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .hero__crest {
+    height: clamp(80px, 21vw, 108px);
+    max-width: 40%;
+    object-fit: contain;
+    margin: 0 0 16px;
+  }
+
+  .hero__eyebrow {
+    max-width: 30em;
+    font-size: clamp(10px, 2.7vw, 12px);
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-wrap: balance;
+    margin: 0 0 16px;
+  }
+
+  .hero__title {
+    font-size: clamp(36px, 9.5vw, 58px);
+    line-height: 0.98;
+    letter-spacing: 0.005em;
+  }
+
+  .hero__tag {
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: 1.25;
+    letter-spacing: 0.045em;
+    margin: 14px 0 0;
+  }
+
+  .hero__lede {
+    max-width: 29em;
+    font-size: clamp(14px, 3.5vw, 16px);
+    line-height: 1.55;
+    text-wrap: pretty;
+    margin: 16px auto 0;
+  }
+
+  .hero__actions {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero__actions .btn {
+    min-height: 48px;
+    height: auto;
+    padding: 12px 22px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    white-space: normal;
   }
 
   .hero__watermark {
@@ -684,4 +739,289 @@
   .hero__actions .btn {
     width: 100%;
   }
+}
+
+/* Home history: compact typography and evenly sized stats on phones. */
+@media (max-width: 540px) {
+  .page--home .history__title {
+    font-size: clamp(36px, 9vw, 44px);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .page--home .history__text {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .page--home .history__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .page--home .history__stat b {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .page--home .history__stat span {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .page--home .history__copy .btn {
+    min-height: 48px;
+    height: auto;
+    padding: 12px 24px;
+    font-size: 17px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* Home goals: match the compact phone sizing of the history section. */
+@media (max-width: 540px) {
+  .page--home .pillars__title {
+    font-size: clamp(36px, 9vw, 44px);
+    line-height: 1;
+  }
+
+  .page--home .pillars__head {
+    margin-bottom: 24px;
+  }
+
+  .page--home .pillar {
+    padding: 22px 20px 24px;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .page--home .pillar__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .page--home .pillar__name {
+    font-size: clamp(23px, 6vw, 26px);
+    line-height: 1.1;
+  }
+
+  .page--home .pillar__text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* Match the On Grounds mobile navy across the goals section and cards. */
+@media (max-width: 860px) {
+  .page--home #pillars,
+  .page--home #pillars .pillar,
+  .page--home #pillars .pillar:hover {
+    background: var(--navy-950);
+  }
+}
+
+/* Keep the namesake seal prominent and centered on phones. */
+@media (max-width: 540px) {
+  .page--home .namesake__media img {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin-inline: auto;
+  }
+}
+
+/* Consistent phone section spacing; the extra 24px allows for rounded overlaps. */
+@media (max-width: 540px) {
+  .page--home main > .section {
+    padding-top: 48px;
+    padding-bottom: 72px;
+  }
+
+  .page--home .hero {
+    padding-bottom: 72px;
+  }
+
+  .page--home .namesake {
+    gap: 24px;
+  }
+
+  .page--home .namesake__title {
+    margin-top: 0;
+  }
+
+  .page--home .join__inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+/* Home events: compact cards and comfortable controls on phones. */
+@media (max-width: 540px) {
+  .page--home .events__title {
+    font-size: clamp(36px, 9vw, 44px);
+    line-height: 1;
+  }
+
+  .page--home .events__bar {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .page--home .events__lede,
+  .page--home .events__empty {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .page--home .events__empty {
+    margin: 0;
+  }
+
+  .page--home .events__grid {
+    gap: 14px;
+  }
+
+  .page--home .event-card {
+    min-height: 0;
+    padding: 22px 20px;
+    gap: 20px;
+  }
+
+  .page--home .event-card__day {
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  .page--home .event-card__month {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  .page--home .event-card__body h4 {
+    font-size: 23px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .page--home .cal-btn {
+    min-height: 44px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .page--home .cal-pop {
+    left: 20px;
+    right: 20px;
+    bottom: 76px;
+  }
+
+  .page--home .cal-pop__item {
+    min-height: 44px;
+  }
+
+  .page--home .social__head {
+    margin: 32px 0 20px;
+    gap: 8px 16px;
+  }
+
+  .page--home .social__head h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .page--home .social__handle {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .page--home .social__grid {
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
+  }
+}
+
+/* Home join section: balanced phone typography and button sizing. */
+@media (max-width: 540px) {
+  .page--home .join__title {
+    font-size: clamp(36px, 9vw, 44px);
+    line-height: 1;
+  }
+
+  .page--home .join__text {
+    max-width: 28em;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 18px 0 26px;
+    text-wrap: pretty;
+  }
+
+  .page--home .join .btn {
+    min-height: 48px;
+    height: auto;
+    max-width: 100%;
+    padding: 12px 24px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    white-space: normal;
+  }
+
+  .page--home .join .btn svg {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .page--home .join {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.pillars__photo {
+  width: 100%;
+  max-width: 480px;
+  margin: 32px auto 0;
+}
+
+.pillars__photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 75%;
+  border-radius: 16px;
+}
+
+@media (max-width: 540px) {
+  .pillars__photo {
+    margin-top: 24px;
+  }
+}
+
+.event-card__description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 16px 0 0;
+}
+
+.event-card__rsvp {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
