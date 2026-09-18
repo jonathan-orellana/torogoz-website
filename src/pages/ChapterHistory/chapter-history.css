@@ -345,13 +345,13 @@
   }
 
   .chapter-history-page .page-hero__title {
-    font-size: clamp(36px, 9.5vw, 48px);
+    font-size: var(--section-title-mobile);
     line-height: 1;
   }
 
   .chapter-history-page .page-hero__subtitle {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 18px;
     text-wrap: pretty;
   }
@@ -364,7 +364,7 @@
   }
 
   .chapter-history-page .page-hero__stat b {
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: var(--section-stat-mobile);
   }
 
   .chapter-history-page .page-hero__stat span {
@@ -379,7 +379,7 @@
     min-height: 48px;
     height: auto;
     max-width: 100%;
-    padding: 12px 24px;
+    padding: var(--section-button-padding-mobile);
     font-size: 17px;
     letter-spacing: 0.05em;
     white-space: normal;
@@ -416,14 +416,14 @@
   }
 
   .chapter-history-page .founding-brothers__title {
-    font-size: clamp(32px, 8vw, 40px);
-    line-height: 1.05;
+    font-size: var(--section-title-mobile);
+    line-height: 1;
     text-wrap: balance;
   }
 
   .chapter-history-page .founding-brothers__intro {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
   }
 
   .chapter-history-page .brother-item {
@@ -439,7 +439,7 @@
 
   .chapter-history-page .brother-item__name {
     min-width: 0;
-    font-size: 16px;
+    font-size: var(--section-copy-size);
     line-height: 1.45;
     overflow-wrap: anywhere;
   }
@@ -456,14 +456,14 @@
   }
 
   .chapter-history-page .on-grounds__title {
-    font-size: clamp(32px, 8vw, 40px);
-    line-height: 1.05;
+    font-size: var(--section-title-mobile);
+    line-height: 1;
     text-wrap: balance;
   }
 
   .chapter-history-page .on-grounds__text {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 18px;
   }
 
@@ -475,7 +475,7 @@
   }
 
   .chapter-history-page .on-grounds__stat b {
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: var(--section-stat-mobile);
   }
 
   .chapter-history-page .on-grounds__stat span {
@@ -506,26 +506,26 @@
 
   .chapter-history-page .crossing__title,
   .chapter-history-page .meaning-section__title {
-    font-size: clamp(32px, 8vw, 40px);
-    line-height: 1.05;
+    font-size: var(--section-title-mobile);
+    line-height: 1;
     text-wrap: balance;
   }
 
   .chapter-history-page .crossing__text {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 18px;
   }
 
   .chapter-history-page .crossing__stats {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 24px;
   }
 
   .chapter-history-page .crossing__stat b {
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: var(--section-stat-mobile);
   }
 
   .chapter-history-page .crossing__stat span {
@@ -539,8 +539,8 @@
   }
 
   .chapter-history-page .meaning-section__quote p {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
   }
 
   .chapter-history-page .meaning-section__quote p + p {
@@ -555,47 +555,6 @@
   }
 }
 
-/* Match Home's phone Join the Brotherhood styling. */
-@media (max-width: 540px) {
-  .chapter-history-page .join__inner {
-    padding-block: 48px;
-  }
-
-  .chapter-history-page .join__title {
-    font-size: clamp(36px, 9vw, 44px);
-    line-height: 1;
-  }
-
-  .chapter-history-page .join__text {
-    max-width: 28em;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 18px 0 26px;
-    text-wrap: pretty;
-  }
-
-  .chapter-history-page .join .btn {
-    min-height: 48px;
-    height: auto;
-    max-width: 100%;
-    padding: 12px 24px;
-    font-size: 17px;
-    letter-spacing: 0.05em;
-    white-space: normal;
-  }
-
-  .chapter-history-page .join .btn svg {
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 860px) {
-  .chapter-history-page .join {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-
 /* Chapter History hero: balanced desktop sizing. */
 @media (min-width: 861px) {
   .chapter-history-page .page-hero {
@@ -603,18 +562,18 @@
   }
 
   .chapter-history-page .page-hero__grid {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
 
   .chapter-history-page .page-hero__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
   }
 
   .chapter-history-page .page-hero__subtitle {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
     text-wrap: pretty;
   }
@@ -622,12 +581,12 @@
   .chapter-history-page .page-hero__stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 26px;
   }
 
   .chapter-history-page .page-hero__stat b {
-    font-size: clamp(30px, 3vw, 36px);
+    font-size: var(--section-stat-desktop);
   }
 
   .chapter-history-page .page-hero__stat span {
@@ -642,7 +601,7 @@
     min-height: 48px;
     height: auto;
     max-width: 100%;
-    padding: 12px 26px;
+    padding: var(--section-button-padding-desktop);
     font-size: 17px;
     letter-spacing: 0.05em;
     white-space: normal;
@@ -660,31 +619,31 @@
 /* Founding brothers: match the compact desktop content sections. */
 @media (min-width: 861px) {
   .chapter-history-page .founding-brothers {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .chapter-history-page .founding-brothers__inner {
-    max-width: 1100px;
+    max-width: var(--section-content-max);
   }
 
   .chapter-history-page .founding-brothers__head {
-    gap: clamp(32px, 4vw, 56px);
+    gap: var(--section-column-gap);
     margin-bottom: 28px;
   }
 
   .chapter-history-page .founding-brothers__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
 
   .chapter-history-page .founding-brothers__intro {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
   }
 
   .chapter-history-page .founding-brothers__grid {
-    column-gap: clamp(32px, 4vw, 56px);
+    column-gap: var(--section-column-gap);
   }
 
   .chapter-history-page .brother-item {
@@ -699,7 +658,7 @@
 
   .chapter-history-page .brother-item__name {
     min-width: 0;
-    font-size: 16px;
+    font-size: var(--section-copy-size);
     line-height: 1.5;
     overflow-wrap: anywhere;
   }
@@ -708,35 +667,35 @@
 /* On Grounds: match the compact desktop content sections. */
 @media (min-width: 861px) {
   .chapter-history-page .on-grounds {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .chapter-history-page .on-grounds__inner {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
 
   .chapter-history-page .on-grounds__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
 
   .chapter-history-page .on-grounds__text {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
   }
 
   .chapter-history-page .on-grounds__stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 26px;
   }
 
   .chapter-history-page .on-grounds__stat b {
-    font-size: clamp(30px, 3vw, 36px);
+    font-size: var(--section-stat-desktop);
   }
 
   .chapter-history-page .on-grounds__stat span {
@@ -754,35 +713,35 @@
 /* Crossing: match the compact desktop content sections. */
 @media (min-width: 861px) {
   .chapter-history-page .crossing {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .chapter-history-page .crossing__inner {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
 
   .chapter-history-page .crossing__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
 
   .chapter-history-page .crossing__text {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
   }
 
   .chapter-history-page .crossing__stats {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 26px;
   }
 
   .chapter-history-page .crossing__stat b {
-    font-size: clamp(30px, 3vw, 36px);
+    font-size: var(--section-stat-desktop);
   }
 
   .chapter-history-page .crossing__stat span {
@@ -796,24 +755,24 @@
 /* Torogoz meaning: match the compact desktop content sections. */
 @media (min-width: 861px) {
   .chapter-history-page .meaning-section {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .chapter-history-page .meaning-section__grid {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
 
   .chapter-history-page .meaning-section__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     margin-bottom: 20px;
     text-wrap: balance;
   }
 
   .chapter-history-page .meaning-section__quote p {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
   }
 
   .chapter-history-page .meaning-section__quote p + p {
@@ -822,43 +781,5 @@
 
   .chapter-history-page .meaning-section__media img {
     height: clamp(280px, 26vw, 360px);
-  }
-}
-
-/* Match Home's compact desktop Join the Brotherhood section. */
-@media (min-width: 861px) {
-  .chapter-history-page .join__inner {
-    padding-block: 64px;
-  }
-
-  .chapter-history-page .join__title {
-    font-size: clamp(40px, 4.2vw, 64px);
-    line-height: 1;
-  }
-
-  .chapter-history-page .join__text {
-    max-width: 30em;
-    font-size: 16px;
-    line-height: 1.65;
-    margin: 20px 0 28px;
-    text-wrap: pretty;
-  }
-
-  .chapter-history-page .join .btn {
-    min-height: 48px;
-    height: auto;
-    max-width: 100%;
-    padding: 12px 26px;
-    font-size: 17px;
-    letter-spacing: 0.05em;
-    white-space: normal;
-  }
-
-  .chapter-history-page .join .btn svg {
-    flex-shrink: 0;
-  }
-
-  .chapter-history-page .join__glyph {
-    font-size: clamp(260px, 30vw, 440px);
   }
 }

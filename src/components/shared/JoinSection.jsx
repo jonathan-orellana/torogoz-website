@@ -1,4 +1,5 @@
 import { CONTACT_FORM_URL } from '../../data/homeData';
+import './join-section.css';
 
 export function JoinSection() {
   return (

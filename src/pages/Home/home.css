@@ -187,7 +187,7 @@
   padding: 34px 28px 40px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--section-grid-gap);
   min-height: 300px;
   transition:
     background 0.25s ease,
@@ -507,50 +507,6 @@
   box-shadow: none !important;
 }
 
-/* ===== Join CTA ===== */
-.join {
-  position: relative;
-  background: var(--sky);
-  overflow: hidden;
-  text-align: center;
-}
-
-.join__inner {
-  position: relative;
-  z-index: 2;
-  padding: clamp(80px, 11vw, 148px) var(--page-padding);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.join__title {
-  font-size: clamp(48px, 8vw, 124px);
-  color: #fff;
-}
-
-.join__text {
-  font-size: clamp(16px, 1.5vw, 20px);
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 30em;
-  margin: 22px 0 38px;
-}
-
-.join__glyph {
-  position: absolute;
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.12);
-  font-size: clamp(260px, 42vw, 640px);
-  line-height: 0.7;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -46%);
-  z-index: 1;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
 /* ===== Laptop (MacBook) ===== */
 @media (max-width: 1440px) and (min-width: 861px) {
   .hero {
@@ -578,14 +534,6 @@
     font-size: clamp(36px, 3.8vw, 58px);
   }
 
-  .join__title {
-    font-size: clamp(44px, 5.6vw, 80px);
-  }
-
-  .join__inner {
-    padding-top: clamp(64px, 8vw, 96px);
-    padding-bottom: clamp(64px, 8vw, 96px);
-  }
 }
 
 /* ===== Responsive ===== */
@@ -682,13 +630,6 @@
     display: none;
   }
 
-  .join {
-    border-radius: 24px;
-    margin-top: -24px;
-    position: relative;
-    z-index: 2;
-  }
-
   .purpose,
   .namesake {
     grid-template-columns: 1fr;
@@ -708,7 +649,7 @@
 
   .social__grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: var(--section-grid-gap);
   }
 
   .social__head {
@@ -744,15 +685,15 @@
 /* Home history: compact typography and evenly sized stats on phones. */
 @media (max-width: 540px) {
   .page--home .history__title {
-    font-size: clamp(36px, 9vw, 44px);
+    font-size: var(--section-title-mobile);
     line-height: 1;
     text-wrap: balance;
   }
 
   .page--home .history__text {
     margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
   }
 
   .page--home .history__stats {
@@ -763,7 +704,7 @@
   }
 
   .page--home .history__stat b {
-    font-size: clamp(28px, 8vw, 38px);
+    font-size: var(--section-stat-mobile);
   }
 
   .page--home .history__stat span {
@@ -776,7 +717,7 @@
   .page--home .history__copy .btn {
     min-height: 48px;
     height: auto;
-    padding: 12px 24px;
+    padding: var(--section-button-padding-mobile);
     font-size: 17px;
     white-space: normal;
     text-align: center;
@@ -786,7 +727,7 @@
 /* Home goals: match the compact phone sizing of the history section. */
 @media (max-width: 540px) {
   .page--home .pillars__title {
-    font-size: clamp(36px, 9vw, 44px);
+    font-size: var(--section-title-mobile);
     line-height: 1;
   }
 
@@ -854,27 +795,23 @@
     margin-top: 0;
   }
 
-  .page--home .join__inner {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
 }
 
 /* Home events: compact cards and comfortable controls on phones. */
 @media (max-width: 540px) {
   .page--home .events__title {
-    font-size: clamp(36px, 9vw, 44px);
+    font-size: var(--section-title-mobile);
     line-height: 1;
   }
 
   .page--home .events__bar {
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-bottom: 24px;
   }
 
   .page--home .events__lede,
   .page--home .events__empty {
-    font-size: 16px;
+    font-size: var(--section-copy-size);
     line-height: 1.6;
   }
 
@@ -955,43 +892,6 @@
   }
 }
 
-/* Home join section: balanced phone typography and button sizing. */
-@media (max-width: 540px) {
-  .page--home .join__title {
-    font-size: clamp(36px, 9vw, 44px);
-    line-height: 1;
-  }
-
-  .page--home .join__text {
-    max-width: 28em;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 18px 0 26px;
-    text-wrap: pretty;
-  }
-
-  .page--home .join .btn {
-    min-height: 48px;
-    height: auto;
-    max-width: 100%;
-    padding: 12px 24px;
-    font-size: 17px;
-    letter-spacing: 0.05em;
-    white-space: normal;
-  }
-
-  .page--home .join .btn svg {
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 860px) {
-  .page--home .join {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-
 .pillars__photo {
   width: 100%;
   max-width: 480px;
@@ -1022,7 +922,7 @@
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     grid-template-rows: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     max-width: 900px;
     height: clamp(400px, 40vw, 520px);
     margin-top: 40px;
@@ -1108,7 +1008,7 @@
   }
 
   .page--home .hero__lede {
-    font-size: 16px;
+    font-size: var(--section-copy-size);
     line-height: 1.6;
     max-width: 34em;
     margin: 16px auto 0;
@@ -1123,7 +1023,7 @@
   .page--home .hero__actions .btn {
     min-height: 48px;
     height: auto;
-    padding: 12px 26px;
+    padding: var(--section-button-padding-desktop);
     font-size: 17px;
     letter-spacing: 0.05em;
     white-space: normal;
@@ -1133,23 +1033,23 @@
 /* Home introduction: balanced desktop sizing beside the Our History link. */
 @media (min-width: 861px) {
   .page--home #purpose {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .page--home .purpose {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
 
   .page--home .purpose__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
 
   .page--home .purpose__text {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin: 20px 0 26px;
   }
 
@@ -1160,7 +1060,7 @@
   .page--home .purpose .btn {
     min-height: 48px;
     height: auto;
-    padding: 12px 26px;
+    padding: var(--section-button-padding-desktop);
     font-size: 17px;
     letter-spacing: 0.05em;
     white-space: normal;
@@ -1170,11 +1070,11 @@
 /* Home goals: compact desktop cards and a balanced photo collage. */
 @media (min-width: 861px) {
   .page--home #pillars {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .page--home #pillars > .wrap {
-    max-width: 1100px;
+    max-width: var(--section-content-max);
   }
 
   .page--home .pillars__head {
@@ -1183,12 +1083,12 @@
   }
 
   .page--home .pillars__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
   }
 
   .page--home .pillars__lede {
-    font-size: 16px;
+    font-size: var(--section-copy-size);
     line-height: 1.6;
   }
 
@@ -1223,35 +1123,35 @@
 /* Home legacy: compact desktop sizing with evenly spaced statistics. */
 @media (min-width: 861px) {
   .page--home #history {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .page--home .history {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
 
   .page--home .history__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
 
   .page--home .history__text {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
   }
 
   .page--home .history__stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 26px;
   }
 
   .page--home .history__stat b {
-    font-size: clamp(32px, 3vw, 40px);
+    font-size: var(--section-stat-desktop);
   }
 
   .page--home .history__stat span {
@@ -1264,7 +1164,7 @@
   .page--home .history__copy .btn {
     min-height: 48px;
     height: auto;
-    padding: 12px 26px;
+    padding: var(--section-button-padding-desktop);
     font-size: 17px;
     letter-spacing: 0.05em;
     white-space: normal;
@@ -1279,24 +1179,24 @@
 /* Home namesake: balanced desktop typography and seal sizing. */
 @media (min-width: 861px) {
   .page--home .namesake-section {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .page--home .namesake {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
 
   .page--home .namesake__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     margin-top: 0;
     text-wrap: balance;
   }
 
   .page--home .namesake__text {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
   }
 
@@ -1308,15 +1208,15 @@
 /* Home events: compact desktop cards and consistent section spacing. */
 @media (min-width: 861px) {
   .page--home #events {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .page--home #events > .wrap {
-    max-width: 1100px;
+    max-width: var(--section-content-max);
   }
 
   .page--home .events__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
   }
 
@@ -1325,13 +1225,13 @@
   }
 
   .page--home .events__lede {
-    font-size: 16px;
+    font-size: var(--section-copy-size);
     line-height: 1.6;
   }
 
   .page--home .events__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
   }
 
   .page--home .event-card {
@@ -1375,7 +1275,7 @@
 
   .page--home .social__head {
     margin: 40px 0 20px;
-    gap: 16px;
+    gap: var(--section-grid-gap);
   }
 
   .page--home .social__head h3 {
@@ -1392,45 +1292,7 @@
 
   .page--home .social__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-  }
-}
-
-/* Home join: compact desktop call to action. */
-@media (min-width: 861px) {
-  .page--home .join__inner {
-    padding-block: 64px;
-  }
-
-  .page--home .join__title {
-    font-size: clamp(40px, 4.2vw, 64px);
-    line-height: 1;
-  }
-
-  .page--home .join__text {
-    max-width: 30em;
-    font-size: 16px;
-    line-height: 1.65;
-    margin: 20px 0 28px;
-    text-wrap: pretty;
-  }
-
-  .page--home .join .btn {
-    min-height: 48px;
-    height: auto;
-    max-width: 100%;
-    padding: 12px 26px;
-    font-size: 17px;
-    letter-spacing: 0.05em;
-    white-space: normal;
-  }
-
-  .page--home .join .btn svg {
-    flex-shrink: 0;
-  }
-
-  .page--home .join__glyph {
-    font-size: clamp(260px, 30vw, 440px);
+    gap: var(--section-grid-gap);
   }
 }
 
@@ -1506,7 +1368,7 @@
   .page--home #pillars > .wrap {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: clamp(32px, 4vw, 56px);
+    column-gap: var(--section-column-gap);
     row-gap: 32px;
     align-items: center;
   }
@@ -1526,7 +1388,7 @@
 
   .page--home .pillar {
     padding: 0;
-    column-gap: 16px;
+    column-gap: var(--section-grid-gap);
   }
 
   .page--home .pillars__photo {

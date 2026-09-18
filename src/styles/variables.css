@@ -23,6 +23,20 @@
 
   /* Spacing */
   --page-padding: clamp(24px, 5vw, 72px);
+
+  /* Shared section scale */
+  --section-content-max: 1100px;
+  --section-padding-desktop: 64px;
+  --section-title-desktop: clamp(36px, 3.6vw, 56px);
+  --section-title-mobile: clamp(36px, 9vw, 44px);
+  --section-copy-size: 16px;
+  --section-copy-line: 1.65;
+  --section-stat-desktop: clamp(32px, 3vw, 40px);
+  --section-stat-mobile: clamp(28px, 8vw, 38px);
+  --section-grid-gap: 16px;
+  --section-column-gap: clamp(32px, 4vw, 56px);
+  --section-button-padding-desktop: 12px 26px;
+  --section-button-padding-mobile: 12px 24px;
 }
 
 /* ===== Reset ===== */

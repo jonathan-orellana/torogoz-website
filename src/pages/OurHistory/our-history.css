@@ -202,7 +202,7 @@
 }
 
 .quick-facts__inner {
-  max-width: 1100px;
+  max-width: var(--section-content-max);
   margin: 0 auto;
 }
 
@@ -338,27 +338,27 @@
     padding: 112px var(--page-padding) 64px;
   }
   .page--our-history .page-hero__grid {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
   .page--our-history .page-hero__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
   .page--our-history .page-hero__subtitle {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
   }
   .page--our-history .page-hero__stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 26px;
   }
   .page--our-history .page-hero__stat b {
-    font-size: clamp(30px, 3vw, 36px);
+    font-size: var(--section-stat-desktop);
   }
   .page--our-history .page-hero__stat span {
     font-size: 12px;
@@ -376,13 +376,13 @@
     padding: 96px 24px 72px;
   }
   .page--our-history .page-hero__title {
-    font-size: clamp(36px, 9.5vw, 48px);
+    font-size: var(--section-title-mobile);
     line-height: 1;
     text-wrap: balance;
   }
   .page--our-history .page-hero__subtitle {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 18px;
     text-wrap: pretty;
   }
@@ -396,7 +396,7 @@
     grid-column: 1 / -1;
   }
   .page--our-history .page-hero__stat b {
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: var(--section-stat-mobile);
   }
   .page--our-history .page-hero__stat span {
     font-size: 12px;
@@ -432,25 +432,25 @@
 
 @media (min-width: 861px) {
   .page--our-history .meaning-section {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
 
   .page--our-history .meaning-section__grid {
-    max-width: 1100px;
+    max-width: var(--section-content-max);
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: clamp(32px, 4vw, 56px);
+    gap: var(--section-column-gap);
   }
 
   .page--our-history .meaning-section__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     margin-bottom: 20px;
     text-wrap: balance;
   }
 
   .page--our-history .meaning-section__quote p {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
   }
 
   .page--our-history .meaning-section__quote p + p {
@@ -468,15 +468,15 @@
   }
 
   .page--our-history .meaning-section__title {
-    font-size: clamp(32px, 8vw, 40px);
-    line-height: 1.05;
+    font-size: var(--section-title-mobile);
+    line-height: 1;
     margin-bottom: 18px;
     text-wrap: balance;
   }
 
   .page--our-history .meaning-section__quote p {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
   }
 
   .page--our-history .meaning-section__quote p + p {
@@ -487,30 +487,30 @@
 /* Built on brotherhood: compact sizing scoped to Our History. */
 @media (min-width: 861px) {
   .page--our-history #history {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
   .page--our-history .history {
-    max-width: 1100px;
-    gap: clamp(32px, 4vw, 56px);
+    max-width: var(--section-content-max);
+    gap: var(--section-column-gap);
   }
   .page--our-history .history__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
   .page--our-history .history__text {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
   }
   .page--our-history .history__stats {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 26px;
   }
   .page--our-history .history__stat b {
-    font-size: clamp(30px, 3vw, 36px);
+    font-size: var(--section-stat-desktop);
   }
   .page--our-history .history__stat span {
     font-size: 12px;
@@ -523,7 +523,7 @@
   .page--our-history .history .btn {
     min-height: 48px;
     height: auto;
-    padding: 12px 26px;
+    padding: var(--section-button-padding-desktop);
     font-size: 17px;
     letter-spacing: 0.05em;
     white-space: normal;
@@ -535,23 +535,23 @@
     padding: 48px 24px 72px;
   }
   .page--our-history .history__title {
-    font-size: clamp(32px, 8vw, 40px);
-    line-height: 1.05;
+    font-size: var(--section-title-mobile);
+    line-height: 1;
     text-wrap: balance;
   }
   .page--our-history .history__text {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 18px;
   }
   .page--our-history .history__stats {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: var(--section-grid-gap);
     margin-top: 24px;
   }
   .page--our-history .history__stat b {
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: var(--section-stat-mobile);
   }
   .page--our-history .history__stat span {
     font-size: 12px;
@@ -562,7 +562,7 @@
     min-height: 48px;
     height: auto;
     max-width: 100%;
-    padding: 12px 24px;
+    padding: var(--section-button-padding-mobile);
     font-size: 17px;
     letter-spacing: 0.05em;
     white-space: normal;
@@ -570,60 +570,25 @@
   }
 }
 
-/* Keep the shared join section consistent with the Home phone layout. */
-@media (max-width: 540px) {
-  .page--our-history .join__title {
-    font-size: clamp(36px, 9vw, 44px);
-    line-height: 1;
-  }
-
-  .page--our-history .join__text {
-    max-width: 28em;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 18px 0 26px;
-    text-wrap: pretty;
-  }
-
-  .page--our-history .join .btn {
-    min-height: 48px;
-    height: auto;
-    max-width: 100%;
-    padding: 12px 24px;
-    font-size: 17px;
-    letter-spacing: 0.05em;
-    white-space: normal;
-  }
-
-  .page--our-history .join .btn svg {
-    flex-shrink: 0;
-  }
-
-  .page--our-history .join {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-
 /* Founding fathers: balanced names and compact section spacing. */
 @media (min-width: 861px) {
   .page--our-history .founding-fathers {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
   .page--our-history .founding-fathers__inner {
-    max-width: 1100px;
+    max-width: var(--section-content-max);
   }
   .page--our-history .founding-fathers__head {
     margin-bottom: 28px;
   }
   .page--our-history .founding-fathers__title {
-    font-size: clamp(36px, 3.6vw, 56px);
+    font-size: var(--section-title-desktop);
     line-height: 1;
     text-wrap: balance;
   }
   .page--our-history .founding-fathers__intro {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 20px;
   }
   .page--our-history .founding-fathers__grid {
@@ -649,13 +614,13 @@
     margin-bottom: 24px;
   }
   .page--our-history .founding-fathers__title {
-    font-size: clamp(32px, 8vw, 40px);
-    line-height: 1.05;
+    font-size: var(--section-title-mobile);
+    line-height: 1;
     text-wrap: balance;
   }
   .page--our-history .founding-fathers__intro {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
     margin-top: 18px;
   }
   .page--our-history .founding-fathers__grid {
@@ -706,7 +671,7 @@
 /* Quick Facts: consistent compact sizing with the surrounding sections. */
 @media (min-width: 861px) {
   .page--our-history .quick-facts {
-    padding-block: 64px;
+    padding-block: var(--section-padding-desktop);
   }
   .page--our-history .quick-facts__eyebrow {
     font-size: 20px;
@@ -721,7 +686,7 @@
     padding-left: 18px;
   }
   .page--our-history .quick-fact__value {
-    font-size: clamp(36px, 3.6vw, 48px);
+    font-size: var(--section-stat-desktop);
     line-height: 1;
   }
   .page--our-history .quick-fact__label {
@@ -747,11 +712,11 @@
     padding-left: 16px;
   }
   .page--our-history .quick-fact__value {
-    font-size: clamp(32px, 8vw, 40px);
+    font-size: var(--section-stat-mobile);
     line-height: 1;
   }
   .page--our-history .quick-fact__label {
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 8px;
     line-height: 1.5;
   }
