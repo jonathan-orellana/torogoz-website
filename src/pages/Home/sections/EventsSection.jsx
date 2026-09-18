@@ -43,9 +43,6 @@ export function EventsSection() {
               Events &amp; <span className="accent">more</span>
             </h2>
           </div>
-          <p className="events__lede">
-            Catch the latest moments, events, and chapter updates.
-          </p>
         </div>
 
         {hasUpcomingEvents ? (

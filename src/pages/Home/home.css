@@ -945,9 +945,13 @@
 
 @media (max-width: 540px) {
   .page--home .social__grid {
-    width: 100%;
-    max-width: none;
+    width: 90%;
+    max-width: 320px;
     margin-inline: auto;
+  }
+
+  .page--home .ig-embed-crop {
+    border-radius: 0;
   }
 }
 
@@ -1042,12 +1046,12 @@
   }
 }
 
-/* Phone event cards keep their blue appearance without hover changes. */
+/* Phone event cards keep their white appearance without hover changes. */
 @media (max-width: 540px) {
   .page--home .event-card,
   .page--home .event-card:hover {
-    background: var(--sky);
-    color: #fff;
+    background: #fff;
+    color: var(--navy-text);
     transform: none;
     box-shadow: 0 14px 30px rgba(6, 18, 31, 0.28);
     transition: none;
@@ -1061,8 +1065,8 @@
   .page--home .event-card .cal-btn,
   .page--home .event-card .cal-btn:hover {
     background: transparent;
-    border-color: rgba(255, 255, 255, 0.6);
-    color: #fff;
+    border-color: rgba(10, 26, 43, 0.18);
+    color: var(--navy-text);
     transition: none;
   }
 }
@@ -1331,13 +1335,13 @@
   }
 
   .page--home .event-card {
-    min-height: 240px;
-    padding: 22px;
-    gap: 20px;
+    min-height: 210px;
+    padding: 18px;
+    gap: 14px;
   }
 
   .page--home .event-card__day {
-    font-size: 40px;
+    font-size: 34px;
     line-height: 1;
   }
 
@@ -1347,7 +1351,7 @@
   }
 
   .page--home .event-card__body h4 {
-    font-size: 23px;
+    font-size: 21px;
     line-height: 1.15;
     margin-bottom: 10px;
     overflow-wrap: anywhere;
@@ -1355,14 +1359,14 @@
 
   .page--home .cal-btn {
     min-height: 44px;
-    margin-top: 16px;
+    margin-top: 12px;
     font-size: 14px;
   }
 
   .page--home .cal-pop {
-    left: 22px;
-    right: 22px;
-    bottom: 76px;
+    left: 18px;
+    right: 18px;
+    bottom: 70px;
   }
 
   .page--home .cal-pop__item {
@@ -1475,5 +1479,116 @@
   .page--home .pillars__grid {
     max-width: 900px;
     margin-inline: auto;
+  }
+}
+
+@media (min-width: 861px) {
+  .page--home .pillars__head {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+}
+
+/* Keep desktop goals open, without individual card boxes. */
+@media (min-width: 861px) {
+  .page--home .pillar,
+  .page--home .pillar:hover {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Desktop goals beside the photos; mobile retains its stacked layout. */
+@media (min-width: 861px) {
+  .page--home #pillars > .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: clamp(32px, 4vw, 56px);
+    row-gap: 32px;
+    align-items: center;
+  }
+
+  .page--home .pillars__head {
+    grid-column: 1 / -1;
+    max-width: none;
+    margin: 0;
+  }
+
+  .page--home .pillars__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .page--home .pillar {
+    padding: 0;
+    column-gap: 16px;
+  }
+
+  .page--home .pillars__photo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 12px;
+    height: clamp(460px, 43vw, 560px);
+    max-width: none;
+    margin: 0;
+  }
+
+  .page--home .pillars__photo > img:first-child {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    object-position: center;
+  }
+}
+
+@media (min-width: 861px) {
+  .page--home .ig-embed-crop {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 861px) {
+  .page--home .social__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (min-width: 861px) {
+  .page--home .events__grid {
+    max-width: 960px;
+    margin-inline: 0;
+    gap: 14px;
+  }
+
+  .page--home .event-card {
+    min-height: 190px;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .page--home .event-card__day {
+    font-size: 30px;
+  }
+
+  .page--home .event-card__body h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .page--home .cal-pop {
+    left: 16px;
+    right: 16px;
+    bottom: 68px;
+  }
+}
+
+@media (max-width: 540px) {
+  .page--home .social__grid > :nth-child(n + 3) {
+    display: none;
   }
 }

@@ -83,6 +83,7 @@ export const INSTAGRAM_POST_URLS = [
   "https://www.instagram.com/p/DZA0YYjkWkX/",
   "https://www.instagram.com/p/DdJ6Zn_kVbi/",
   "https://www.instagram.com/p/DcjktRUBrnt/",
+  "https://www.instagram.com/p/DdT_Ni8MaUi/",
 ];
 
 // To show an event, fill in all fields.
