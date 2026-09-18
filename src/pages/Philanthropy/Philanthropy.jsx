@@ -10,7 +10,7 @@ export function Philanthropy() {
   useScrollReveal();
 
   return (
-    <main>
+    <main className="page--philanthropy">
       <CompactHero
         title={
           <>

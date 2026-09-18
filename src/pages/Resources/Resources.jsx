@@ -8,7 +8,7 @@ export function Resources() {
   useScrollReveal();
 
   return (
-    <main>
+    <main className="page--resources">
       <CompactHero
         title={
           <>

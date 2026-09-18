@@ -80,6 +80,10 @@ function NavItem({ link }) {
 export function Header({ menuOpen = false, onToggle }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const { pathname } = useLocation();
+  const useNavyHeader = ["/leadership", "/philanthropy", "/resources"].includes(
+    pathname,
+  );
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -104,6 +108,7 @@ export function Header({ menuOpen = false, onToggle }) {
 
   const headerClass = [
     "header",
+    useNavyHeader && "header--navy",
     isScrolled && "is-stuck",
     isHidden && !menuOpen && "is-hidden",
   ]

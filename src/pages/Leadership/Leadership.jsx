@@ -7,7 +7,7 @@ export function Leadership() {
   useScrollReveal();
 
   return (
-    <main>
+    <main className="page--leadership">
       <CompactHero
         title={
           <>

@@ -1,11 +1,11 @@
 .board {
   background: var(--paper);
   color: var(--navy-text);
-  padding: clamp(64px, 8vw, 112px) var(--page-padding) clamp(80px, 10vw, 128px);
+  padding: var(--section-padding-desktop) var(--page-padding);
 }
 
 .board__inner {
-  max-width: 1120px;
+  max-width: var(--section-content-max);
   margin: 0 auto;
 }
 
@@ -106,12 +106,84 @@
   }
 }
 
+@media (min-width: 861px) {
+  .page--leadership .compact-hero {
+    padding: 112px var(--page-padding) 64px;
+  }
+
+  .page--leadership .compact-hero__glyph {
+    top: 82%;
+  }
+
+  .page--leadership .compact-hero__inner {
+    max-width: 760px;
+  }
+
+  .page--leadership .compact-hero__title {
+    font-size: var(--section-title-desktop);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .page--leadership .compact-hero__subtitle {
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
+  }
+
+  .board__grid {
+    column-gap: var(--section-column-gap);
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  .page--leadership .compact-hero {
+    background: var(--navy-950);
+  }
+
+  .page--leadership .compact-hero__title {
+    font-size: var(--section-title-mobile);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .page--leadership .compact-hero__subtitle {
+    font-size: var(--section-copy-size);
+    line-height: var(--section-copy-line);
+  }
+}
+
 @media (max-width: 520px) {
+  .page--leadership .compact-hero {
+    padding: 96px 24px 72px;
+  }
+
+  .board {
+    padding: 48px 24px 72px;
+  }
+
   .board__grid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .member__photo {
     width: min(200px, 66%);
+    margin-bottom: 20px;
+  }
+
+  .member__role {
+    font-size: clamp(23px, 6vw, 26px);
+    line-height: 1.1;
+  }
+
+  .member__name {
+    font-size: var(--section-copy-size);
+    line-height: 1.45;
+  }
+
+  .member__meta,
+  .member__link {
+    font-size: 13.5px;
   }
 }
