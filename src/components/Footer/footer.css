@@ -38,17 +38,23 @@
 .footer__col h4 {
   font-family: var(--font-display);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 14px;
+  letter-spacing: 0.04em;
+  font-size: 17px;
   color: #fff;
   margin: 0 0 16px;
-  font-weight: 600;
-  opacity: 0.85;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.9;
 }
 
 .footer__col a {
   display: block;
-  font-size: 15px;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1;
   color: #fff;
   opacity: 0.9;
   margin-bottom: 11px;
@@ -214,7 +220,6 @@
 
   .footer__col h4 {
     margin-bottom: 10px;
-    letter-spacing: 0.08em;
   }
 
   .footer__col a {
@@ -222,7 +227,6 @@
     align-items: center;
     min-height: 36px;
     margin-bottom: 0;
-    font-size: 14px;
   }
 
   .footer__bottom {

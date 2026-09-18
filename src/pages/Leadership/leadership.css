@@ -49,23 +49,27 @@
   font-family: var(--font-display);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  font-size: clamp(20px, 1.9vw, 25px);
+  letter-spacing: 0.04em;
+  font-size: clamp(18px, 1.55vw, 21px);
   line-height: 1.05;
   color: var(--sky);
-  margin: 0 0 8px;
+  margin: 0 0 6px;
+  text-wrap: balance;
 }
 
 .member__name {
-  font-size: clamp(16px, 1.3vw, 18px);
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
   color: var(--navy-text);
   margin: 0;
 }
 
 .member__meta {
-  font-size: 13.5px;
-  letter-spacing: 0.04em;
+  font-size: 12.25px;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  text-transform: none;
   color: var(--muted);
   margin: 6px 0 0;
 }
@@ -74,10 +78,12 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 13.5px;
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--sky);
-  font-weight: 600;
-  margin-top: 12px;
+  font-weight: 700;
+  margin-top: 10px;
   transition: color 0.15s;
 }
 
