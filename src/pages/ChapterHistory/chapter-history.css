@@ -337,3 +337,528 @@
   }
 
 }
+
+/* Chapter History hero: compact phone sizing, independent of other pages. */
+@media (max-width: 540px) {
+  .chapter-history-page .page-hero {
+    padding: 96px 24px 72px;
+  }
+
+  .chapter-history-page .page-hero__title {
+    font-size: clamp(36px, 9.5vw, 48px);
+    line-height: 1;
+  }
+
+  .chapter-history-page .page-hero__subtitle {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 18px;
+    text-wrap: pretty;
+  }
+
+  .chapter-history-page .page-hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .chapter-history-page .page-hero__stat b {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .chapter-history-page .page-hero__stat span {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .chapter-history-page .page-hero .btn {
+    margin-top: 24px !important; /* Override the shared hero's inline spacing. */
+    min-height: 48px;
+    height: auto;
+    max-width: 100%;
+    padding: 12px 24px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    white-space: normal;
+  }
+
+  .chapter-history-page .page-hero .btn svg {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .chapter-history-page .page-hero__media {
+    display: block;
+  }
+
+  .chapter-history-page .page-hero__media img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center 28%;
+  }
+}
+
+/* Founding brothers: compact, readable phone layout. */
+@media (max-width: 540px) {
+  .chapter-history-page .founding-brothers {
+    padding: 48px 24px 72px;
+    scroll-margin-top: 80px;
+  }
+
+  .chapter-history-page .founding-brothers__head {
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .chapter-history-page .founding-brothers__title {
+    font-size: clamp(32px, 8vw, 40px);
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  .chapter-history-page .founding-brothers__intro {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .chapter-history-page .brother-item {
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .chapter-history-page .brother-item__number {
+    flex: 0 0 30px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+
+  .chapter-history-page .brother-item__name {
+    min-width: 0;
+    font-size: 16px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* On Grounds: balanced phone image, typography, and statistics. */
+@media (max-width: 540px) {
+  .chapter-history-page .on-grounds {
+    padding: 48px 24px 72px;
+  }
+
+  .chapter-history-page .on-grounds__inner {
+    gap: 24px;
+  }
+
+  .chapter-history-page .on-grounds__title {
+    font-size: clamp(32px, 8vw, 40px);
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  .chapter-history-page .on-grounds__text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 18px;
+  }
+
+  .chapter-history-page .on-grounds__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .chapter-history-page .on-grounds__stat b {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .chapter-history-page .on-grounds__stat span {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .chapter-history-page .on-grounds__media img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+}
+
+/* Crossing and Torogoz meaning: consistent phone sizing. */
+@media (max-width: 540px) {
+  .chapter-history-page .crossing,
+  .chapter-history-page .meaning-section {
+    padding: 48px 24px 72px;
+  }
+
+  .chapter-history-page .crossing__inner,
+  .chapter-history-page .meaning-section__grid {
+    gap: 24px;
+  }
+
+  .chapter-history-page .crossing__title,
+  .chapter-history-page .meaning-section__title {
+    font-size: clamp(32px, 8vw, 40px);
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  .chapter-history-page .crossing__text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 18px;
+  }
+
+  .chapter-history-page .crossing__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .chapter-history-page .crossing__stat b {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .chapter-history-page .crossing__stat span {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+  }
+
+  .chapter-history-page .meaning-section__title {
+    margin-bottom: 18px;
+  }
+
+  .chapter-history-page .meaning-section__quote p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .chapter-history-page .meaning-section__quote p + p {
+    margin-top: 16px;
+  }
+
+  .chapter-history-page .meaning-section__media img {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin-inline: auto;
+  }
+}
+
+/* Match Home's phone Join the Brotherhood styling. */
+@media (max-width: 540px) {
+  .chapter-history-page .join__inner {
+    padding-block: 48px;
+  }
+
+  .chapter-history-page .join__title {
+    font-size: clamp(36px, 9vw, 44px);
+    line-height: 1;
+  }
+
+  .chapter-history-page .join__text {
+    max-width: 28em;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 18px 0 26px;
+    text-wrap: pretty;
+  }
+
+  .chapter-history-page .join .btn {
+    min-height: 48px;
+    height: auto;
+    max-width: 100%;
+    padding: 12px 24px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    white-space: normal;
+  }
+
+  .chapter-history-page .join .btn svg {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .chapter-history-page .join {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* Chapter History hero: balanced desktop sizing. */
+@media (min-width: 861px) {
+  .chapter-history-page .page-hero {
+    padding: 112px var(--page-padding) 64px;
+  }
+
+  .chapter-history-page .page-hero__grid {
+    max-width: 1100px;
+    gap: clamp(32px, 4vw, 56px);
+  }
+
+  .chapter-history-page .page-hero__title {
+    font-size: clamp(36px, 3.6vw, 56px);
+    line-height: 1;
+  }
+
+  .chapter-history-page .page-hero__subtitle {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-top: 20px;
+    text-wrap: pretty;
+  }
+
+  .chapter-history-page .page-hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+  }
+
+  .chapter-history-page .page-hero__stat b {
+    font-size: clamp(30px, 3vw, 36px);
+  }
+
+  .chapter-history-page .page-hero__stat span {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .chapter-history-page .page-hero .btn {
+    margin-top: 26px !important; /* Override the shared hero's inline spacing. */
+    min-height: 48px;
+    height: auto;
+    max-width: 100%;
+    padding: 12px 26px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    white-space: normal;
+  }
+
+  .chapter-history-page .page-hero .btn svg {
+    flex-shrink: 0;
+  }
+
+  .chapter-history-page .page-hero__media img {
+    height: clamp(320px, 30vw, 400px);
+  }
+}
+
+/* Founding brothers: match the compact desktop content sections. */
+@media (min-width: 861px) {
+  .chapter-history-page .founding-brothers {
+    padding-block: 64px;
+  }
+
+  .chapter-history-page .founding-brothers__inner {
+    max-width: 1100px;
+  }
+
+  .chapter-history-page .founding-brothers__head {
+    gap: clamp(32px, 4vw, 56px);
+    margin-bottom: 28px;
+  }
+
+  .chapter-history-page .founding-brothers__title {
+    font-size: clamp(36px, 3.6vw, 56px);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .chapter-history-page .founding-brothers__intro {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .chapter-history-page .founding-brothers__grid {
+    column-gap: clamp(32px, 4vw, 56px);
+  }
+
+  .chapter-history-page .brother-item {
+    gap: 14px;
+    padding: 16px 2px;
+  }
+
+  .chapter-history-page .brother-item__number {
+    flex: 0 0 30px;
+    font-size: 14px;
+  }
+
+  .chapter-history-page .brother-item__name {
+    min-width: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* On Grounds: match the compact desktop content sections. */
+@media (min-width: 861px) {
+  .chapter-history-page .on-grounds {
+    padding-block: 64px;
+  }
+
+  .chapter-history-page .on-grounds__inner {
+    max-width: 1100px;
+    gap: clamp(32px, 4vw, 56px);
+  }
+
+  .chapter-history-page .on-grounds__title {
+    font-size: clamp(36px, 3.6vw, 56px);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .chapter-history-page .on-grounds__text {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-top: 20px;
+  }
+
+  .chapter-history-page .on-grounds__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+  }
+
+  .chapter-history-page .on-grounds__stat b {
+    font-size: clamp(30px, 3vw, 36px);
+  }
+
+  .chapter-history-page .on-grounds__stat span {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .chapter-history-page .on-grounds__media img {
+    height: clamp(320px, 30vw, 400px);
+  }
+}
+
+/* Crossing: match the compact desktop content sections. */
+@media (min-width: 861px) {
+  .chapter-history-page .crossing {
+    padding-block: 64px;
+  }
+
+  .chapter-history-page .crossing__inner {
+    max-width: 1100px;
+    gap: clamp(32px, 4vw, 56px);
+  }
+
+  .chapter-history-page .crossing__title {
+    font-size: clamp(36px, 3.6vw, 56px);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .chapter-history-page .crossing__text {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-top: 20px;
+  }
+
+  .chapter-history-page .crossing__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+  }
+
+  .chapter-history-page .crossing__stat b {
+    font-size: clamp(30px, 3vw, 36px);
+  }
+
+  .chapter-history-page .crossing__stat span {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Torogoz meaning: match the compact desktop content sections. */
+@media (min-width: 861px) {
+  .chapter-history-page .meaning-section {
+    padding-block: 64px;
+  }
+
+  .chapter-history-page .meaning-section__grid {
+    max-width: 1100px;
+    gap: clamp(32px, 4vw, 56px);
+  }
+
+  .chapter-history-page .meaning-section__title {
+    font-size: clamp(36px, 3.6vw, 56px);
+    line-height: 1;
+    margin-bottom: 20px;
+    text-wrap: balance;
+  }
+
+  .chapter-history-page .meaning-section__quote p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .chapter-history-page .meaning-section__quote p + p {
+    margin-top: 16px;
+  }
+
+  .chapter-history-page .meaning-section__media img {
+    height: clamp(280px, 26vw, 360px);
+  }
+}
+
+/* Match Home's compact desktop Join the Brotherhood section. */
+@media (min-width: 861px) {
+  .chapter-history-page .join__inner {
+    padding-block: 64px;
+  }
+
+  .chapter-history-page .join__title {
+    font-size: clamp(40px, 4.2vw, 64px);
+    line-height: 1;
+  }
+
+  .chapter-history-page .join__text {
+    max-width: 30em;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 20px 0 28px;
+    text-wrap: pretty;
+  }
+
+  .chapter-history-page .join .btn {
+    min-height: 48px;
+    height: auto;
+    max-width: 100%;
+    padding: 12px 26px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    white-space: normal;
+  }
+
+  .chapter-history-page .join .btn svg {
+    flex-shrink: 0;
+  }
+
+  .chapter-history-page .join__glyph {
+    font-size: clamp(260px, 30vw, 440px);
+  }
+}

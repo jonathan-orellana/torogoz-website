@@ -186,17 +186,17 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
-  .page--home .header,
-  .page--home .header.is-stuck {
-    padding: 10px 20px;
+  .header,
+  .header.is-stuck {
+    padding: 10px var(--page-padding);
   }
 
-  .page--home .brand__crest {
+  .brand__crest {
     height: 44px;
     width: auto;
   }
 
-  .page--home .burger {
+  .burger {
     width: 44px;
     height: 44px;
     flex-shrink: 0;
@@ -216,43 +216,54 @@
   }
 }
 
-/* Compact desktop header for the home page. */
+/* Shared compact desktop header. */
 @media (min-width: 861px) {
-  .page--home .header {
+  .header {
     padding: 14px var(--page-padding);
     gap: 16px;
   }
 
-  .page--home .header.is-stuck {
+  .header.is-stuck {
     padding: 10px var(--page-padding);
   }
 
-  .page--home .brand__crest {
+  .brand__crest {
     height: 52px;
     width: auto;
   }
 
-  .page--home .nav {
+  .nav {
     gap: clamp(16px, 2vw, 26px);
   }
 
-  .page--home .nav > a,
-  .page--home .nav__toggle {
+  .nav > a,
+  .nav__toggle {
     min-height: 44px;
     font-size: 14px;
     letter-spacing: 0.02em;
   }
 
-  .page--home .header__cta {
+  .header__cta {
     height: 44px;
     padding-inline: 18px;
     font-size: 13px;
     letter-spacing: 0.02em;
   }
 
-  .page--home .dropdown a {
+  .dropdown a {
     min-height: 44px;
     padding: 10px 12px;
     font-size: 14px;
+  }
+}
+
+/* Match the Chapter History header to its navy sections. */
+body:has(.chapter-history-page) .header {
+  background: var(--navy-900);
+}
+
+@media (max-width: 860px) {
+  body:has(.chapter-history-page) .header {
+    background: var(--navy-950);
   }
 }

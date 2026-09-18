@@ -12,7 +12,7 @@ export function ChapterHistory() {
   useScrollReveal();
 
   return (
-    <main>
+    <main className="chapter-history-page">
       <PageHero
         title={
           <>

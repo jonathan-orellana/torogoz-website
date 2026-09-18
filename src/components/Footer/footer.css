@@ -115,7 +115,7 @@
 @media (max-width: 540px) {
   .footer {
     background: var(--navy-950);
-    padding: 30px 24px 40px;
+    padding: 30px var(--page-padding) 40px;
     text-align: center;
     color: var(--ink-soft);
   }
@@ -174,66 +174,50 @@
 
   .footer__copy {
     display: block;
-    font-size: 11.5px;
+    font-size: 12px;
     margin-top: 12px;
     opacity: 0.7;
     line-height: 1.6;
   }
 }
 
-/* Small sizing refinements for the home footer on phones. */
-@media (max-width: 540px) {
-  .page--home .footer__crest {
-    height: 44px;
-  }
-
-  .page--home .footer__socials a {
-    width: 44px;
-    height: 44px;
-  }
-
-  .page--home .footer__copy {
-    font-size: 12px;
-  }
-}
-
-/* Compact home footer on desktop. */
+/* Shared compact footer on desktop. */
 @media (min-width: 861px) {
-  .page--home .footer {
+  .footer {
     padding: 48px var(--page-padding) 28px;
   }
 
-  .page--home .footer > .wrap {
+  .footer > .wrap {
     max-width: 1100px;
   }
 
-  .page--home .footer__top {
+  .footer__top {
     gap: 32px;
     padding-bottom: 28px;
   }
 
-  .page--home .footer__crest {
+  .footer__crest {
     height: 48px;
     margin-bottom: 12px;
   }
 
-  .page--home .footer__motto {
+  .footer__motto {
     font-size: 20px;
     letter-spacing: 0.04em;
     margin: 12px 0 0;
   }
 
-  .page--home .footer__desc {
+  .footer__desc {
     margin-top: 8px;
     line-height: 1.6;
   }
 
-  .page--home .footer__col h4 {
+  .footer__col h4 {
     margin-bottom: 10px;
     letter-spacing: 0.08em;
   }
 
-  .page--home .footer__col a {
+  .footer__col a {
     display: flex;
     align-items: center;
     min-height: 36px;
@@ -241,17 +225,17 @@
     font-size: 14px;
   }
 
-  .page--home .footer__bottom {
+  .footer__bottom {
     padding-top: 20px;
     gap: 16px;
     font-size: 12px;
   }
 
-  .page--home .footer__socials {
+  .footer__socials {
     gap: 10px;
   }
 
-  .page--home .footer__socials a {
+  .footer__socials a {
     width: 44px;
     height: 44px;
   }
