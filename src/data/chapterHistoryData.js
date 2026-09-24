@@ -18,5 +18,5 @@ export const FOUNDING_BROTHERS = [
 export const UVA_STATS = [
   { value: "2026", label: "Chartered" },
   { value: "UVA", label: "Charlottesville, VA" },
-  { value: "1st", label: "Chapter on Grounds" },
+  // { value: "1st", label: "Chapter on Grounds" },
 ];
