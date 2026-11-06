@@ -82,8 +82,8 @@ export const CHAPTER_STATS = [
 export const INSTAGRAM_POST_URLS = [
   "https://www.instagram.com/p/DZA0YYjkWkX/",
   "https://www.instagram.com/p/DdJ6Zn_kVbi/",
-  "https://www.instagram.com/p/DcjktRUBrnt/",
-  "https://www.instagram.com/p/DdT_Ni8MaUi/",
+  "https://www.instagram.com/p/DfS27T0SMGh/",
+  "https://www.instagram.com/p/DfP75TGBieu/",
 ];
 
 // To show an event, fill in all fields.
@@ -91,10 +91,10 @@ export const INSTAGRAM_POST_URLS = [
 // date: "YYYY-MM-DD"  |  startTime / endTime: "HH:MM" (24-hour)
 export const EVENTS = [
   {
-    title: "First Informational of the Semester",
-    date: "2026-09-16",
-    startTime: "19:30",
-    endTime: "",
-    location: "RSVP for location",
+    title: "PA'LANTE THE YOUNG LORDS",
+    date: "2026-11-09",
+    startTime: "18:00",
+    endTime: "19:30",
+    location: "Latinx Student Center",
   },
 ];
